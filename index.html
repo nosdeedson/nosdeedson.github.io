@@ -9,29 +9,66 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
     <title>Hello</title>
 </head>
 
 <body class="bg-light">
-    <header class="card-header">
-        <img src="imgs/EJS.png" alt="logotipo">
-    </header>
-    <main>
+    <header class="card-header" >
 
+        <div class="container-fluid header">
+            <div class="row">
+              <div class="col-5">
+                ​<picture>
+                    <img src="imgs/EJS.png" class="float-start logoTipo img-fluid" alt="logo tipo">
+                </picture>
+              </div>
+              <div class="col-7">
+                <h2 id="ejs" >Edson Jose de Souza</h2>
+                <h4 id="sisInfo" >Sistemas de Informação</h4>
+              </div>
+            </div>
+          </div>
+    </header>
+    <main style="height: auto;">
+        corpo
     </main>
 
+    <footer class="footer card-footer text-muted">
+rodape
+    </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+    </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+    </script>
+    <script>
+        function typeWriter(elemento) {
+            const nameArray = elemento.innerHTML.split('')
+            elemento.innerHTML = ''
+            nameArray.forEach((letra, i) => {
+                setTimeout(() => {elemento.innerHTML += letra; 
+                }, 150 * (i + 1));
+            });           
+        }
+
+        let nome = document.querySelector('#ejs')
+        const curse = document.querySelector('#sisInfo')
+       
+        typeWriter(nome);
+        typeWriter(curse) 
+        
+    </script>
 </body>
 
 </html>
