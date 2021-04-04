@@ -7,7 +7,7 @@ function acoesPagina (){
         vetor.forEach((letra, i) => {
             setTimeout(() => {
                 elemento.innerHTML += letra;
-            }, 150 * (i + 1));
+            }, 100 * (i + 1));
         }); 
     }
 
@@ -23,8 +23,9 @@ function acoesPagina (){
     p.then( ( resultado) => {
         setTimeout(() => {
             typeWriter(resultado, 'sisInfo')  
-        }, 3000);
+        }, 1900);
     });
+    
     let hoje = new Date();
     let ano = hoje.getFullYear();
     document.getElementById('ano').value = ano;

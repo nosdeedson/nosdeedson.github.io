@@ -14,7 +14,7 @@ html, body{
 }
 
 .principal{
-    height: 60%;
+    height: auto;
 }
 
 .textoAlinhamento{
