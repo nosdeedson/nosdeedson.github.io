@@ -6,7 +6,7 @@ function loadIncludes(parent){
         function(i, e){
             const url = $(e).attr('ejs-include')
             console.log(url)
-            jquery.ajax({
+            $.ajax({
                 url,
                 success(data){
                     $(e).html(data);
