@@ -3,7 +3,7 @@ html, body{
 }
 
 .cabecalho{
-    height: 40%;
+    height: 30%;
 }
 
 .footer {
@@ -14,7 +14,7 @@ html, body{
 }
 
 .principal{
-    height: 200%;
+    height: 60%;
 }
 
 .textoAlinhamento{
@@ -49,6 +49,22 @@ html, body{
     50%{
         opacity: 0;
     }
+}
+
+/* nav style*/
+.nav_space{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 30px;
+}
+
+a{
+    color: black;
+    font-size: 20px;
+    align-items: center;
 }
 
 
