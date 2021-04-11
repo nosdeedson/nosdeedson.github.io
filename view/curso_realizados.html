@@ -66,13 +66,57 @@
     <main class="bg-light pricipal" style="min-height: 400px;">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-5">
-                    <article class="text-justify">
-                        <p class="lead" style="font-family: Arial, Helvetica, sans-serif; font-size: 24px;">
-                            cursos Realizados
-                        </p>
-                    </article>
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-5 border border-primary mb-1" >
+                    <h3 style="text-align: center;" class="mb-2 mt-4">Curso Spring</h3>
+                    <h4 style="text-align: center;" class="mb-3" >Descrição do curso no site Udemy</h4>
+                    <p class="lead text-justify" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+                        VISÃO FUNCIONAL:</strong> Neste projeto você vai aprender a construir login, cadastro de usuário,
+                        fluxo completo de navegação de carrinho de compras, fluxo de fechamento de pedido, 
+                        tela de perfil de usuário com envio de foto tanto pela câmera quanto pela galeria. <br> <br>
+                        <strong>VISÃO TÉCNICA - BACK END: </strong> Para isto nós vamos criar uma API Rest usando Java com Spring Boot
+                        e banco de dados MySQL. Vamos usar JPA com Hibernate para mapeamento objeto-relacional, 
+                        envio de email com SMTP da Google, armazenamento de imagens com storage S3 da Amazon, 
+                        autenticação e autorização com tokens JWT, e implantação na nuvem usando a plataforma 
+                        Heroku. Vamos aprender também validação de dados, tratamento de exceções, uso adequado do 
+                        protocolo HTTP no padrão REST, segurança, CORS, e muito mais. Versão: Spring Boot 2.0.x e 1.5.x
+                        <br> <br>
+                        <strong>VISÃO TÉCNICA - FRONT END:</strong> Além do back end, também vamos desenvolver o front end 
+                        utilizando Ionic. Vamos explorar a arquitetura MVC do Angular, os componentes visuais do 
+                        Ionic, Angular reactive forms, navegação, interceptors, local storage, tratamento de erros,
+                        acesso à câmera e galeria, paginação com infinite scroll, loading e refresher. Vamos cobrir
+                        também todo processo de build para Android e publicação do app na Play Store. 
+                        Versão: Ionic 3 e Angular 5.
+                    </p>
+                    <picture id="cert_curso_spring" hidden=true>
+                        <img src="../Certificados/UC-9ab7985a-bc9b-48cc-885d-fbdc583c4775.jpg" class="img-fluid" alt="Responsive image">
+                    </picture>
+                    <div class="col-lg-12" style="text-align: right;">
+                        <button onclick="mostraCertificado()" id="mostrar_Certificado"
+                         type="button" class="btn btn-primary mb-2 align-content-end" style="text-align: right;">
+                         Ver certificado
+                        </button>
+                        <button onclick="mostraCertificado()" id="esconder_Certificado" hidden=true
+                        type="button" class="btn btn-primary mb-2 align-content-end" style="text-align: right;">
+                        Esconder certificado
+                       </button>
+                    </div>
                 </div>
+            </div>
+            <!-- trabalho tcc -->
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-5 border border-primary mb-1" >
+                <h3 style="text-align: center;" class="mb-2 mt-4">Trabalho de Conclusão de Curso</h3>
+                <p class="lead text-justify" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+                    <strong style="font-size: 18px; font-weight: bold;">Descrição:</strong>
+                No meu Trabalho de Conclusão de Curso desenvolvi um site para uma pequena escola de ensico
+                da língua inglesa. A escola necessitava de um sistema para o registro das avaliações dos
+                alunos. Para ver o texto final do meu TCC <a href="https://drive.google.com/file/d/1S8KBWS2Y3Vap5UFFsT4W8mLEUh8OcLeq/view?usp=sharing" target="_blank">Clique aqui.</a> <br>
+                Para visualizar o site desenvolvido durante o TCC para a instituição de ensino
+                <a href="https://beyondiscola.herokuapp.com/" target="_blank">Clique aqui.</a>
+                O site está hospedado no Heroku e é uma plataforma para hospedagem de sites, como estou
+                usando uma conta free, onde tenho limitações de armazenamento de dados, e se a aplicação
+                ficar muito tempo sem receber requisições, a mesma é colocada em hibernação. Sendo assim
+                ao clicar no link para acessá-la pode demorar uns 30 segundos.
+                </p>
             </div>
         </div>
     </main>
@@ -107,6 +151,7 @@
     </script>
     <script>
         acoesPagina();
+        mostraCertificado()
     </script>
     
 </body>

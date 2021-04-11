@@ -39,3 +39,16 @@ function acoesPagina (){
     }
     itemSelecionado();
 }
+
+function mostraCertificado(){
+    if ( document.getElementById('cert_curso_spring').hidden == true){
+        document.getElementById('cert_curso_spring').hidden = false;
+        document.getElementById('esconder_Certificado').hidden = false;
+        document.getElementById('mostrar_Certificado').hidden = true;
+    }
+    else{
+        document.getElementById('cert_curso_spring').hidden = true;
+        document.getElementById('esconder_Certificado').hidden = true;
+        document.getElementById('mostrar_Certificado').hidden = false;
+    }
+}
