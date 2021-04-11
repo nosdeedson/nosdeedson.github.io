@@ -67,4 +67,11 @@ a{
     align-items: center;
 }
 
+/* css do a header */
+.ativo{
+    background-color: #0bc5eb;
+    border-radius: 5px;
+    color: white;
+}
+
 

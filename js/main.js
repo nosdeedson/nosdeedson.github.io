@@ -28,5 +28,14 @@ function acoesPagina (){
     
     let hoje = new Date();
     let ano = hoje.getFullYear();
-    document.getElementById('ano').value = ano;
+    document.getElementById('ano').value += ano;
+
+    function addClass( i ){
+        document.getElementById(i).className='ativo'
+    }
+
+    function itemSelecionado(){
+        window.onload(addClass(0));
+    }
+    itemSelecionado();
 }
