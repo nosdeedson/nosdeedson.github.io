@@ -61,14 +61,124 @@
               </nav>
         </div>
     </header>
-    <main class="bg-light pricipal" style="min-height: 400px;">
+    <main class="bg-light pricipal mb-2" style="min-height: 400px;">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-5">
                     <article class="text-justify">
                         <p class="lead" style="font-family: Arial, Helvetica, sans-serif; font-size: 24px;">
-                          projetos
+                            Um dos sistemas que desenvolvi no intuíto de melhorar minha capacidade de programação
+                            foi um sistema para controle de estoque em Java, uma aplicação desktop, o sistema não
+                            foi finalizado e após avançar no curso percebi que o projeto precisava de uma melhoria na 
+                            validação dos dados inseridos pelo usuário.
+                            
+                            Outro projeto que desenvoli foi uma aplicação desktop para o cálculo de horas extras de
+                            motoristas em um dos empregos que tive. Esta aplicação cheguei a finalizar, mas após 
+                            finalizá-la percebi que ela poderia ter uma melhor interface de usuário,  
+                            perciebi que poderia ter criado uma interface que facilitasse a digitação.
+                            Neste projeto não fiz conexão a um banco de dados, salvava a digitação em PDF, usando a
+                            biblioteca iText versão 5.
+                        
+                            Como dito na página <a href="curso_realizados.html">Cursos Realizados</a> fiz um curso na Udemy 
+                            sobre Spring Boot, para ver a descrição do curso no site da Udemy <a href="https://www.udemy.com/course/spring-boot-ionic/" target="_blank">clique aqui.</a>
+                            Como relatado na mesma página criei um web site para uma escola de inglês como parte do meu
+                            Trabalho de Conclusão de Curso.
+
+                            Todos os códigos podem ser vistos no GitHub nos links abaixo. <br> <br>
+
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="https://github.com/nosdeedson/Controle-de-Estoque" target="_blank">
+                                    Código do sistema para controle de estoque.
+                                    </a>
+                                    <span class="badge badge-primary badge-pill">
+                                        <a href="https://github.com/nosdeedson/Controle-de-Estoque" target="_blank">
+                                            <i class="fa fa-link" aria-hidden="true"></i>
+                                        </a>
+                                    </span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="https://github.com/nosdeedson/Controle-de-Estoque" target="_blank">
+                                        Código do sistema para cálculo de horas extras.
+                                    </a>
+                                    <span class="badge badge-primary badge-pill">
+                                        <a href="https://github.com/nosdeedson/CalculaHorasExtras" target="_blank">
+                                            <i class="fa fa-link" aria-hidden="true"></i>
+                                        </a>
+                                    </span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="https://github.com/nosdeedson/curso-spring-ionic-frontend" target="_blank">
+                                        Curso Udemy código front-end.
+                                    </a>
+                                    <span class="badge badge-primary badge-pill">
+                                        <a href="https://github.com/nosdeedson/curso-spring-ionic-frontend" target="_blank">
+                                            <i class="fa fa-link" aria-hidden="true"></i>
+                                        </a>
+                                    </span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <a href="https://github.com/nosdeedson/cursoSpring" target="_blank">
+                                        Curso Udemy código back-end.
+                                    </a>
+                                    <span class="badge badge-primary badge-pill">
+                                        <a href="https://github.com/nosdeedson/cursoSpring" target="_blank">
+                                            <i class="fa fa-link" aria-hidden="true"></i>
+                                        </a>
+                                    </span>
+                                </li>
+                            </ul>
                         </p>
+                        <p class="lead text-justify" style="font-family: Arial, Helvetica, sans-serif; font-size: 20px;">
+                        A API desenvolvida para o curso Spring contém alguns endpoints públicos, os links estão abaixo, clique nos ícones.
+                        Como a API está hospedada no Heroku, em uma conta free, e este hiberna as aplicações que
+                        não recebem requisições depois de 30 minutos a primeira requisição demora a ser respondida, pois é feito o deploy
+                        novamente. 
+                        </p>
+
+                        <!-- links da api -->
+                        <ul class="list-group">
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Requisição que devolve apenas uma STRING, use para subir a aplicação.
+                                <span class="badge badge-primary badge-pill">
+                                    <a href="https://curso-spring-ejs.herokuapp.com" target="_blank">
+                                        <i class="fa fa-link" aria-hidden="true"></i>
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Devolve um JSON com um produto.
+                                <span class="badge badge-primary badge-pill">
+                                    <a href="https://curso-spring-ejs.herokuapp.com/produtos/1" target="_blank">
+                                        <i class="fa fa-link" aria-hidden="true"></i>
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                Devolve uma lista com os produtos que foram classificados na categoria de id 1.
+                                <span class="badge badge-primary badge-pill">
+                                    <a href="https://curso-spring-ejs.herokuapp.com/produtos/nome-categorias?categoriasId=1" target="_blank">
+                                        <i class="fa fa-link" aria-hidden="true"></i>
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    Devolve uma lista de categorias usando o recurso de paginação do Spring.
+                                <span class="badge badge-primary badge-pill">
+                                    <a href="https://curso-spring-ejs.herokuapp.com/categorias/page?size=10" target="_blank">
+                                        <i class="fa fa-link" aria-hidden="true"></i>
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                 Devolve os Estados já registrados no sistemas.
+                                <span class="badge badge-primary badge-pill">
+                                    <a href="https://curso-spring-ejs.herokuapp.com/estados" target="_blank">
+                                        <i class="fa fa-link" aria-hidden="true"></i>
+                                    </a>
+                                </span>
+                            </li>
+                        </ul>
                     </article>
                 </div>
             </div>
