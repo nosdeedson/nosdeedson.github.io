@@ -40,15 +40,14 @@ function acoesPagina (){
     itemSelecionado();
 }
 
-function mostraCertificado(){
-    if ( document.getElementById('cert_curso_spring').hidden == true){
-        document.getElementById('cert_curso_spring').hidden = false;
-        document.getElementById('esconder_Certificado').hidden = false;
-        document.getElementById('mostrar_Certificado').hidden = true;
-    }
-    else{
-        document.getElementById('cert_curso_spring').hidden = true;
-        document.getElementById('esconder_Certificado').hidden = true;
-        document.getElementById('mostrar_Certificado').hidden = false;
-    }
+function mostraCertificado(mostraCertificado, escondeBotaoMostra, mostraBotaoEsconde){   
+    document.getElementById(mostraCertificado).hidden = false;
+    document.getElementById(escondeBotaoMostra).hidden = true;
+    document.getElementById(mostraBotaoEsconde).hidden = false;
+}
+
+function esconderCertificado(esconderCertificado, mostraBotaoMostra, escondeBotaoEsconde){
+        document.getElementById(esconderCertificado).hidden = true;
+        document.getElementById(escondeBotaoEsconde).hidden = true;
+        document.getElementById(mostraBotaoMostra).hidden = false;
 }
