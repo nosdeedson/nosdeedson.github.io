@@ -4,65 +4,61 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js"></script>
     <title>Hello</title>
 </head>
 
 <body >
     <header class="card-header cabecalho" >
-
         <div class="container-fluid header">
             <div class="row">
-              <div class="col-2">
-                ​<picture>
-                    <img src="imgs/EJS.png" class="float-start logoTipo img-fluid" alt="logo tipo">
+              <div class="col-12 col-sm-4">
+                <picture id="pic_foto" >
+                    <a href="about_me.html"> <img src="imgs/eu.jpg" class="rounded-circle img-fluid eu" 
+                        alt="logo tipo"></a>
                 </picture>
               </div>
-              <div class="col-8">
-                <h2 style="font-family: 'Libre Baskerville', serif;" class="text-center" id="ejs" >Edson Jose de Souza</h2>
-                <h4 style="font-family: 'Libre Baskerville', serif;" class="text-center" id="sisInfo" >Bacharel em Sistemas de Informação</h4>
-              </div>
-              <div class="col-2">
-                <picture>
-                    <a href="about_me.html"> <img src="imgs/eu.jpg" class="rounded-circle img-fluid eu" alt="logo tipo"></a>
-                </picture>
+              <div class="col-12 col-sm-8 text-center">
+                <h2 style="font-family: 'Libre Baskerville', serif;" class="" id="ejs" >Edson Jose de Souza</h2>
+                <h4 style="font-family: 'Libre Baskerville', serif;" class="" id="sisInfo" >Bacharel em Sistemas de Informação</h4>
               </div>
             </div>
-          </div>
-          <div class="col-lg-12 align-content-center text-align-center mt-2" >
-              <nav style="font-family: 'Libre Baskerville', serif;"  >
-                  <ul class="nav_space">
-                    <li class="">
-                        <a></a>
-                    </li>
-                    <li class="">
-                        <a class="page ativo" id="0" href="index.html">Inicio</a>
-                    </li>
-                    <li class="">
-                        <a class="page" href="view/projetos.html">Projetos</a>
-                    </li>
-                    <li class="">
-                        <a class="page" href="view/curso_realizados.html" >Curos Realizados</a>
-                    </li>
-                    <li class="">
-                        <a class="page" href="view/about_me.html" >Sobre Mim</a>
-                    </li>
-                    <li class="">
-                        <a></a>
-                    </li>
-                  </ul>
-              </nav>
         </div>
+            <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #e3f2fd;"
+            data-toggle="tooltip" data-placement="top" title="Menu" >
+            <button class="navbar-toggler navbar-expand-sm" type="button" data-toggle="collapse" 
+            data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" 
+            aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02" >
+                <ul class="navbar-nav mt-2 justify-content-between" >
+                    <li class="nav-item">
+                        <a class="nav-link ativo" href="index.html">Início </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="view/projetos.html">Projetos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="view/curso_realizados.html">Cursos Realizados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="view/about_me.html">Sobre Mim</a>
+                    </li>
+                </ul>
+            </div>
+            </nav>
+        </div> 
     </header>
     <main class="bg-secondary pricipal"  style="min-height: 400px;">
         <div class="container">
@@ -92,14 +88,14 @@
 
     <footer class="footer card-footer text-muted">
         <div class="row">
-            <div class="col-5 text-center">
+            <div class="col-12 col-sm-12 col-md-5 text-center">
                 <h4>Email: nosdejs32@gmail.com </h4>
             </div>
-            <div class="col-2">
+            <div class="col-12 col-sm-12 col-md-2 text-center">
                 <i class="fa fa-birthday-cake" aria-hidden="true"></i>
                 <input disabled style="width: 95px;" type="text" name="ano" id="ano" value="1980 a ">
             </div>
-            <div class="col-5 text-center">
+            <div class="col-12 col-sm-12 col-md-5 text-center">
                 <h4>Celular: (35) 9 9869-8374</h4>
             </div>
         </div>
