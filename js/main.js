@@ -71,11 +71,10 @@ function makeRequisicao(url){
 
     function alertContents(){
         if ( http.readyState === 4){
-            console.log(http.status + http.getAllResponseHeaders())
             if ( http.status === 200){
-                alert("Fizemos uma requisição nesta url: " + url + " para que o Heroku fizesse o deploy. Resposta: [ " + http.responseText + " ]");
+                console.log("Fizemos uma requisição nesta url: " + url + " para que o Heroku fizesse o deploy. Resposta: [ " + http.responseText + " ]");
             } else{
-                alert("Fizemos uma requisição nesta url: " + url + " , para que o Heroku despertasse a aplicação, mas falhou." );
+                console.log("Fizemos uma requisição nesta url: " + url + " , para que o Heroku despertasse a aplicação, mas falhou." );
             }
         }
     }
