@@ -58,18 +58,20 @@ function esconderCertificado(esconderCertificado, mostraBotaoMostra, escondeBota
 }
 
 function makeRequisicao(url){
-    
+
     var http = new XMLHttpRequest();
     http.onreadystatechange = alertContents;
     http.open('GET', url);
-    http.setRequestHeader('X-PINGOTHER', 'pingpong');
-    http.setRequestHeader('Content-Type', 'application/xml');
-    http.setRequestHeader('Access-Control-Request-Method', 'GET');
-    http.setRequestHeader('Access-Control-Allow-Origin', 'http://foo.example');
+    http.setRequestHeader('Access-Control-Allow-Origin', '*');
+    http.setRequestHeader('Accept', '*/*');
+    http.setRequestHeader('Access-Control-Allow-Credentials', 'true');
+    http.setRequestHeader('Content-type', 'text/html')
+
     http.send(null);   
 
     function alertContents(){
         if ( http.readyState === 4){
+            console.log(http.status + http.getAllResponseHeaders())
             if ( http.status === 200){
                 alert("Fizemos uma requisição nesta url: " + url + " para que o Heroku fizesse o deploy. Resposta: [ " + http.responseText + " ]");
             } else{
