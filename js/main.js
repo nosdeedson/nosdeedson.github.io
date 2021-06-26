@@ -38,6 +38,11 @@ function acoesPagina (){
         window.onload(addClass(0));
     }
     itemSelecionado();
+    window.onload(requisicoes());
+}
+
+function requisicoes(){
+    alert("tste")
 }
 
 function mostraCertificado(mostraCertificado, escondeBotaoMostra, mostraBotaoEsconde){   
@@ -50,4 +55,27 @@ function esconderCertificado(esconderCertificado, mostraBotaoMostra, escondeBota
         document.getElementById(esconderCertificado).hidden = true;
         document.getElementById(escondeBotaoEsconde).hidden = true;
         document.getElementById(mostraBotaoMostra).hidden = false;
+}
+
+function makeRequisicao(url){
+    
+    var http = new XMLHttpRequest();
+    http.onreadystatechange = alertContents;
+    http.open('GET', url);
+    http.setRequestHeader('X-PINGOTHER', 'pingpong');
+    http.setRequestHeader('Content-Type', 'application/xml');
+    http.setRequestHeader('Access-Control-Request-Method', 'GET');
+    http.setRequestHeader('Access-Control-Allow-Origin', 'http://foo.example');
+    http.send(null);   
+
+    function alertContents(){
+        if ( http.readyState === 4){
+            if ( http.status === 200){
+                alert("Fizemos uma requisição nesta url: " + url + " para que o Heroku fizesse o deploy. Resposta: [ " + http.responseText + " ]");
+            } else{
+                alert("Fizemos uma requisição nesta url: " + url + " , para que o Heroku despertasse a aplicação, mas falhou." );
+            }
+        }
+    }
+    
 }
