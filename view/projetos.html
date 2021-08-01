@@ -19,193 +19,174 @@
 </head>
 
 <body >
-    <header class="card-header cabecalho" >
-
-        <div class="container-fluid header">
-            <div class="row">
-                <div class="col-12 col-sm-3">
-                    <picture>
-                        <a href="about_me.html"> <img src="../imgs/eu.jpg" class="rounded-circle img-fluid eu" alt="logo tipo"></a>
-                    </picture>
-                </div>
-                <div class="col-12 col-sm-9 mt-4">
-                    <h2 style="font-family: 'Libre Baskerville', serif;" class="text-center" id="ejs">Edson Jose de Souza</h2>
-                    <h4 style="font-family: 'Libre Baskerville', serif;" class="text-center" id="sisInfo">Bacharel em Sistemas de
-                        Informação</h4>
-                </div>
-            </div>
+    <div class="logo bg-dark">
+        <div class="container-fluid d-flex justify-content-center">
+            <picture id="pic_foto">
+                <a href="about_me.html"> <img src="../imgs/eu.jpg" class="rounded-circle img-fluid" alt="logotipo"></a>
+            </picture>
         </div>
-        <nav class="navbar navbar-expand-sm navbar-light mt-2" style="background-color:#e3f2fd;" data-toggle="tooltip"
-            data-placement="top" title="Menu">
-            <a class="navbar-brand" href="#">
-                <img src="../imgs/logoEJS.svg" width="70" height="70" alt="">
-            </a>
-            <button class="navbar-toggler navbar-expand-sm" type="button" data-toggle="collapse"
-                data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse navbar-expand-sm" id="navbarTogglerDemo02">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item" >
-                        <a class="nav-link" href="../index.html">Início</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link ativo" href="projetos.html">Projetos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="curso_realizados.html">Cursos Realizados</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about_me.html">Sobre Mim</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    </div>
+    <header class="cabecalho bg-dark">
+        <div class="col-12 col-sm-9 text-center mt-2">
+            <h2 style="font-family: 'Libre Baskerville', serif;" class="" id="ejs">Edson Jose de Souza</h2>
+            <h4 style="font-family: 'Libre Baskerville', serif;" class="" id="sisInfo">
+                Bacharel em Sistemas de Informação
+            </h4>
+        </div>
     </header>
-    <main class="bg-secondary pricipal" style="min-height: 400px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-5">
-                    <article class="text-justify">
-                        <p  class="lead" style="font-family: roboto; color: whitesmoke; ">
-                            Para desenvolver minhas habilidades na linguagem <strong style="color: black;">Java</strong> deselvolvi um sistema 
-                            desktop para controle de estoque usando o banco de dados Mysql, dando continuidade nos estudos
-                            do curso superior aprendi que eu deveria ter validado os dados inseridos pelo usuário. <br> <br>
+    <aside class="menu">
+        <a class="nav-link my-3 text-white link-menu" href="../index.html"><i class="fa fa-home pr-2"></i> Início</a>
+        <a class="nav-link my-3 text-white link-menu ativo" href="projetos.html"><i class="fa fa-gear pr-2"></i> Projetos</a>
+        <a class="nav-link my-3 text-white link-menu" href="curso_realizados.html"><i class="fa fa-book pr-2"></i> Cursos
+            Realizados</a>
+        <a class="nav-link my-3 text-white link-menu" href="about_me.html"><i class="fa fa-eye esconde pr-2"></i> Sobre Mim </a>
+        <img id="brasao" src="../imgs/EJS.png" alt="logo tipo">
 
-                            Em um dos empregos que atuei, no setor público, o cálculo do banco de horas era feito 
-                            manualmente, vi uma oportunidade para desenvolver minhas habilidades em Engenharia de 
-                            Software, fiz a coleta dos requisitos para ententimento do processo e criei uma aplicação 
-                            desktop para este cálculo, neste projeto usei a biblioteca iText 5 para gerar PDF com 
-                            os cálculos realizados pelo sistema.
-                            <br> <br>
-                            Na página <a href="curso_realizados.html">Cursos Realizados</a>  é exibido os cursos realizados pela
-                            plataforma <a href="https://www.udemy.com/pt/" target="_blank">Udemy</a>, além do(s) curso(s) sendo 
-                            realizados.
-                            <br><br>
-                            Todos os códigos podem ser vistos no GitHub nos links abaixo. <br> <br>
-
-                            <ul class="list-group">
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <a href="https://github.com/nosdeedson/Controle-de-Estoque" target="_blank">
-                                    Código do sistema para controle de estoque.
-                                    </a>
-                                    <span class="badge badge-primary badge-pill">
-                                        <a href="https://github.com/nosdeedson/Controle-de-Estoque" target="_blank">
-                                            <i class="fa fa-link" aria-hidden="true"></i>
-                                        </a>
-                                    </span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <a href="https://github.com/nosdeedson/Controle-de-Estoque" target="_blank">
-                                        Código do sistema para cálculo de horas extras.
-                                    </a>
-                                    <span class="badge badge-primary badge-pill">
-                                        <a href="https://github.com/nosdeedson/CalculaHorasExtras" target="_blank">
-                                            <i class="fa fa-link" aria-hidden="true"></i>
-                                        </a>
-                                    </span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <a href="https://github.com/nosdeedson/curso-spring-ionic-frontend" target="_blank">
-                                        Curso Udemy - código front-end.
-                                    </a>
-                                    <span class="badge badge-primary badge-pill">
-                                        <a href="https://github.com/nosdeedson/curso-spring-ionic-frontend" target="_blank">
-                                            <i class="fa fa-link" aria-hidden="true"></i>
-                                        </a>
-                                    </span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <a href="https://github.com/nosdeedson/cursoSpring" target="_blank">
-                                        Curso Udemy - código back-end.
-                                    </a>
-                                    <span class="badge badge-primary badge-pill">
-                                        <a href="https://github.com/nosdeedson/cursoSpring" target="_blank">
-                                            <i class="fa fa-link" aria-hidden="true"></i>
-                                        </a>
-                                    </span>
-                                </li>
-                                <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    <a href="https://github.com/nosdeedson/Beyond-School" target="_blank">
-                                        Código  do site desenvolvido para o TCC.
-                                    </a>
-                                    <span class="badge badge-primary badge-pill">
-                                        <a href="https://github.com/nosdeedson/cursoSpring" target="_blank">
-                                            <i class="fa fa-link" aria-hidden="true"></i>
-                                        </a>
-                                    </span>
-                                </li>
-                            </ul>
-                        </p>
-                        <p class="lead text-justify" style="font-family: roboto; color: whitesmoke; ">
-                        A API desenvolvida para o curso Spring contém alguns endpoints públicos, os links estão abaixo, clique nos ícones.
-                        Como a API está hospedada no Heroku, em uma conta free, e este hiberna as aplicações que
-                        não recebem requisições depois de 30 minutos a primeira requisição demora a ser respondida, pois é feito o deploy
-                        novamente, podendo ocorrer um erro. 
-                        </p>
-
-                        <!-- links da api -->
-                        <ul class="list-group mb-2">
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Requisição que devolve apenas uma STRING, use para subir a aplicação.
-                                <span class="badge badge-primary badge-pill">
-                                    <a href="https://curso-spring-ejs.herokuapp.com" target="_blank">
-                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                    </a>
-                                </span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Devolve um JSON com um produto.
-                                <span class="badge badge-primary badge-pill">
-                                    <a href="https://curso-spring-ejs.herokuapp.com/produtos/1" target="_blank">
-                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                    </a>
-                                </span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Devolve uma lista com os produtos que foram classificados na categoria de id 1.
-                                <span class="badge badge-primary badge-pill">
-                                    <a href="https://curso-spring-ejs.herokuapp.com/produtos/nome-categorias?categoriasId=1" target="_blank">
-                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                    </a>
-                                </span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                    Devolve uma lista de categorias usando o recurso de paginação do Spring.
-                                <span class="badge badge-primary badge-pill">
-                                    <a href="https://curso-spring-ejs.herokuapp.com/categorias/page?size=10" target="_blank">
-                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                    </a>
-                                </span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                 Devolve os Estados já registrados no sistemas.
-                                <span class="badge badge-primary badge-pill">
-                                    <a href="https://curso-spring-ejs.herokuapp.com/estados" target="_blank">
-                                        <i class="fa fa-link" aria-hidden="true"></i>
-                                    </a>
-                                </span>
-                            </li>
-                        </ul>
-                    </article>
+    </aside>
+    <main class="conteudo d-flex justify-content-center">
+        <div class="home bg-white my-2" style="height: auto;">
+            <div class="border border-success border-2 rounded  m-2 p-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-1">
+                            <article class="text-justify">
+                                <p  class="lead" style="font-family: roboto; color: black; ">
+                                    Para desenvolver minhas habilidades na linguagem <strong style="color: black;">Java</strong> deselvolvi um sistema 
+                                    desktop para controle de estoque usando o banco de dados Mysql, dando continuidade nos estudos
+                                    do curso superior aprendi que eu deveria ter validado os dados inseridos pelo usuário. <br> <br>
+                
+                                    Em um dos empregos que atuei, no setor público, o cálculo do banco de horas era feito 
+                                    manualmente, vi uma oportunidade para desenvolver minhas habilidades em Engenharia de 
+                                    Software, fiz a coleta dos requisitos para ententimento do processo e criei uma aplicação 
+                                    desktop para este cálculo, neste projeto usei a biblioteca iText 5 para gerar PDF com 
+                                    os cálculos realizados pelo sistema.
+                                    <br> <br>
+                                    Na página <a class="link-menu link-text" href="curso_realizados.html"> <strong> Cursos Realizados </strong></a>  
+                                    é exibido os cursos realizados pela
+                                    plataforma
+                                    <a href="https://www.udemy.com/pt/" class="link-menu link-text" target="_blank">
+                                     <strong>Udemy</strong></a>, além do(s) curso(s) sendo realizados.
+                                    <br><br>
+                                    Todos os códigos podem ser vistos no GitHub nos links abaixo. <br> <br>
+                
+                                    <ul class="list-group">
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <a class="link-text" href="https://github.com/nosdeedson/Controle-de-Estoque" target="_blank">
+                                            Código do sistema para controle de estoque.
+                                            </a>
+                                            <span>
+                                                <a href="https://github.com/nosdeedson/Controle-de-Estoque" target="_blank">
+                                                    <i class="fa fa-link" aria-hidden="true"></i>
+                                                </a>
+                                            </span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <a class="link-text" href="https://github.com/nosdeedson/Controle-de-Estoque" target="_blank">
+                                                Código do sistema para cálculo de horas extras.
+                                            </a>
+                                            <span>
+                                                <a href="https://github.com/nosdeedson/CalculaHorasExtras" target="_blank">
+                                                    <i class="fa fa-link" aria-hidden="true"></i>
+                                                </a>
+                                            </span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <a class="link-text" href="https://github.com/nosdeedson/curso-spring-ionic-frontend" target="_blank">
+                                                Curso Udemy - código front-end.
+                                            </a>
+                                            <span>
+                                                <a href="https://github.com/nosdeedson/curso-spring-ionic-frontend" target="_blank">
+                                                    <i class="fa fa-link" aria-hidden="true"></i>
+                                                </a>
+                                            </span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <a class="link-text" href="https://github.com/nosdeedson/cursoSpring" target="_blank">
+                                                Curso Udemy - código back-end.
+                                            </a>
+                                            <span>
+                                                <a href="https://github.com/nosdeedson/cursoSpring" target="_blank">
+                                                    <i class="fa fa-link" aria-hidden="true"></i>
+                                                </a>
+                                            </span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            <a class="link-text" href="https://github.com/nosdeedson/Beyond-School" target="_blank">
+                                                Código  do site desenvolvido para o TCC.
+                                            </a>
+                                            <span>
+                                                <a href="https://github.com/nosdeedson/cursoSpring" target="_blank">
+                                                    <i class="fa fa-link" aria-hidden="true"></i>
+                                                </a>
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </p>
+                                <p class="lead text-justify" style="font-family: roboto; color:black; ">
+                                A API desenvolvida para o curso Spring contém alguns endpoints públicos, os links estão abaixo, clique nos ícones.
+                                Como a API está hospedada no Heroku, em uma conta free, e este hiberna as aplicações que
+                                não recebem requisições depois de 30 minutos a primeira requisição demora a ser respondida, pois é feito o deploy
+                                novamente, podendo ocorrer um erro. 
+                                </p>
+                
+                                <!-- links da api -->
+                                <ul class="list-group mb-2">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Requisição que devolve apenas uma STRING, use para subir a aplicação.
+                                        <span >
+                                            <a href="https://curso-spring-ejs.herokuapp.com" target="_blank">
+                                                <i class="fa fa-link" aria-hidden="true"></i>
+                                            </a>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Devolve um JSON com um produto.
+                                        <span >
+                                            <a href="https://curso-spring-ejs.herokuapp.com/produtos/1" target="_blank">
+                                                <i class="fa fa-link" aria-hidden="true"></i>
+                                            </a>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Devolve uma lista com os produtos que foram classificados na categoria de id 1.
+                                        <span >
+                                            <a href="https://curso-spring-ejs.herokuapp.com/produtos/nome-categorias?categoriasId=1" target="_blank">
+                                                <i class="fa fa-link" aria-hidden="true"></i>
+                                            </a>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                            Devolve uma lista de categorias usando o recurso de paginação do Spring.
+                                        <span >
+                                            <a href="https://curso-spring-ejs.herokuapp.com/categorias/page?size=10" target="_blank">
+                                                <i class="fa fa-link" aria-hidden="true"></i>
+                                            </a>
+                                        </span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                         Devolve os Estados já registrados no sistemas.
+                                        <span >
+                                            <a href="https://curso-spring-ejs.herokuapp.com/estados" target="_blank">
+                                                <i class="fa fa-link" aria-hidden="true"></i>
+                                            </a>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
-
-    <footer class="footer card-footer text-muted">
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-5 text-center">
-                <h4>Email: nosdejs32@gmail.com </h4>
-            </div>
-            <div class="col-12 col-sm-12 col-md-2 text-center">
+    <footer class="rodape bg-secondary">
+        <div class="mt-2 itens" >
+            <div>
                 <i class="fa fa-birthday-cake" aria-hidden="true"></i>
-                <input disabled style="width: 95px;" type="text" name="ano" id="ano" value="1980 a ">
+                <input class="input-niver" disabled  type="text" name="ano" id="ano" value="1980 a ">
             </div>
-            <div class="col-12 col-sm-12 col-md-5 text-center">
-                <h4>Celular: (35) 9 9869-8374</h4>
-            </div>
+            <span><i class="fa fa-at mr-2"></i> nosdejs32@gmail.com </span>
+            <span > <i class="fa fa-phone mr-1"></i> (35) 9 9869-8374</span>
         </div>
     </footer>
     <!-- Optional JavaScript -->

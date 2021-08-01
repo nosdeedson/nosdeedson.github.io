@@ -1,95 +1,191 @@
-html, body{
-    height: 100%;
+:root{
+    --bg-dark: #1A2F3A;
+    --bg-gray: #364046;
+    --header-height: 150px;
+    --header-height-tablet: 190px;
+    --menu-top-height: 80px;
+    --aside-width: 220px;
+    --footer-height: 40px;
+    --footer-height-small: 90px;
+    --shadow: 
+        0 2px 23px 0 rgba(0, 0, 0, 0.534),
+        0 2px 49px 0 rgba(0, 0, 0, 0.829);
+    --shadow-logo:
+        0 2px 23px 0 rgba(247, 241, 241, 0.342),
+        0 2px 49px 0 rgba(230, 223, 223, 0.479);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f5f5f5;
+    margin: 0;
+    display: grid;
+    grid-template-columns: var(--aside-width) 1fr;
+    grid-template-rows: 
+        var(--header-height)
+        1fr
+        var(--footer-height);
+    grid-template-areas: 
+        "logo cabecalho"
+        "menu conteudo"
+        "menu rodape";
+    height: 100vh;
+}
+
+#brasao{
+    bottom: 10px;
+    left: 5%;
+    position: fixed;
+    height: 50px;
+    width: 50px;
+}
+
+.logo{
+    grid-area: logo;
 }
 
 .cabecalho{
-    height: auto;
+    grid-area: cabecalho;
+    color: whitesmoke;
 }
 
-.footer {
-    bottom:0;
-    left:0;
-    width: 100%;
-    height: auto;
+.menu{
+    grid-area: menu;
+    background-color: rgb(22, 22, 22);
 }
 
-.principal{
-    height: auto;
+.conteudo{
+    grid-area: conteudo;
+    background-color: #d1cece;
 }
 
-.textoAlinhamento{
-    text-align: center;
+.rodape{
+    grid-area: rodape;
 }
 
-.logoTipo{
-    height: 100%;
-    position: relative;
-    top: 5%;
-    width: 40%;
+.logo img{
+    box-shadow: var(--shadow-logo);
+    margin-top: 10px;
+    height: 110px;
+    width: 110px;
 }
-
-.eu{
-    height: 80%;
-    width: 40%;
-}
-
-
-.textoAnimado::after{
-    content: '|';
-    margin-left: 1px;
-    opacity: 1;
-    animation: piscar;
-}
-
-@keyframes piscar{
-    0%, 100% {
-        opacity: 1;
-    }
-
-    50%{
-        opacity: 0;
-    }
-}
-
-/* nav style*/
-.nav_space{
-    list-style: none;
+.itens{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    top: 30px;
+    justify-content: space-around;
 }
 
-a{
+.home{
+    height: 95%;
+    width: 95%;
+    box-shadow: var(--shadow);
+}
+
+.link-menu:hover{
+    background: linear-gradient(135deg, #07a7e3 0%, #32dac3 100%);
+    border-radius: 10px 5% / 20px;
+    margin: 3%;
+    text-decoration: none;
+}
+
+.link-menu{
+    margin: 3%;
+}
+
+.link-text{
+    text-decoration: none;
     color: black;
-    font-size: 20px;
-    align-items: center;
 }
 
-/* css do a header */
+.input-niver{
+    width: 95px;
+    background-color: rgb(131, 123, 123);
+    color: whitesmoke;
+}
+
 .ativo{
     background-color: #babec2;
     border-radius: 5px;
     color: white;
 }
 
-.espaco_entre{
-    display: flex;
-    justify-content: space-between;
-}
+@media(max-width: 768px) {
+    body {
+        grid-template-rows:
+            var(--header-height-tablet)
+            var(--header-height-tablet)
+            var(--menu-top-height)
+            1fr
+            --footer-height-small;
+        grid-template-columns: var(--aside-width) 1fr;
+        grid-template-areas:
+            "logo cabecalho"
+            "menu menu"
+            "conteudo conteudo"
+            "rodape rodape";
+    }
+    .menu {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+  
+    .menu a{
+        display: inline;
+    }
 
-@media (max-width: 600px)
-{
-    .eu{
+    .itens{
+        display: flexbox;
+    }
+
+    #brasao{
+        visibility: hidden;
+    }
+
+    
+} 
+
+@media(max-width: 576px) {
+    body {
+        grid-template-rows:
+            var(--header-height)
+            var(--header-height)
+            var(--menu-top-height)
+            1fr
+            var(--footer-height-small);
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "logo"
+            "cabecalho"
+            "menu"
+            "conteudo"
+            "rodape";
+    }
+
+    .esconde{
+        margin: 2px;
+    }
+
+    .menu {
+        display: flex;
+        overflow: hidden;
+    }
+    .cabecalho h2 h4{
+        margin: 0;
+        font-size: 10px;
+    }
+
+    #brasao{
+        visibility: hidden;
+    }
+
+    .itens{
+        display: grid;
+        align-items: inherit;
         position: relative;
-        left: 30%;
+        float: none;
     }
-
-    .pic_foto{
-        text-align: center;
-    }
-
 }
-
 

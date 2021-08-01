@@ -11,355 +11,341 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
     <script src="../js/main.js"></script>
     <title>Cursos Realizados</title>
 </head>
 
-<body >
-    <header class="card-header cabecalho" >
-
-        <div class="container-fluid header">
-            <div class="row">
-                <div class="col-12 col-sm-3">
-                    <picture>
-                        <a href="about_me.html"> <img src="../imgs/eu.jpg" class="rounded-circle img-fluid eu" alt="logo tipo"></a>
-                    </picture>
-                </div>
-                <div class="col-12 col-sm-9 mt-4">
-                    <h2 style="font-family: 'Libre Baskerville', serif;" class="text-center" id="ejs">Edson Jose de Souza</h2>
-                    <h4 style="font-family: 'Libre Baskerville', serif;" class="text-center" id="sisInfo"> Bacharel em Sistemas de
-                        Informação</h4>
-                </div>
-            </div>
+<body>
+    <div class="logo bg-dark">
+        <div class="container-fluid d-flex justify-content-center">
+            <picture id="pic_foto">
+                <a href="about_me.html"> <img src="../imgs/eu.jpg" class="rounded-circle img-fluid" alt="logotipo"></a>
+            </picture>
         </div>
-        <nav class="navbar navbar-expand-sm navbar-light mt-2" style="background-color: #e3f2fd;" data-toggle="tooltip"
-            data-placement="top" title="Menu">
-            <a class="navbar-brand" href="#">
-                <img src="../imgs/logoEJS.svg" width="70" height="70" alt="">
-            </a>
-            <button class="navbar-toggler navbar-expand-sm" type="button" data-toggle="collapse"
-                data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse navbar-expand-sm" id="navbarTogglerDemo02">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Início</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="projetos.html">Projetos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link ativo" href="curso_realizados.html">Cursos Realizados</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about_me.html">Sobre Mim</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    </div>
+    <header class="cabecalho bg-dark">
+        <div class="col-12 col-sm-9 text-center mt-2">
+            <h2 style="font-family: 'Libre Baskerville', serif;" class="" id="ejs">Edson Jose de Souza</h2>
+            <h4 style="font-family: 'Libre Baskerville', serif;" class="" id="sisInfo">
+                Bacharel em Sistemas de Informação
+            </h4>
+        </div>
     </header>
-    <main class="bg-secondary pricipal"  style="min-height: 400px;">
-        <div class="container">
-            <div class="row">
-                                <!-- trabalho tcc -->
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-5 border border-white" style="position: relative; top: -5px;" >
-                    <h2 style="text-align: center;" class="mb-2 mt-4">Curso Superior</h2>
-                    <p class="lead text-center" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
-                        Fiz o curso de Sistemas de Informação na Fundação de Pesquisa e Ensino de Itajubá (FEPI).
-                    </p>
-                    <h3 style="text-align: center;" class="mb-2 mt-4">Trabalho de Conclusão de Curso</h3>
-                    <p class="lead text-justify" style="font-family: roboto; color: whitesmoke;">
-                        <strong style="font-size: 18px; font-weight: bold;">Descrição:</strong>
-                    No meu Trabalho de Conclusão de Curso desenvolvi um site para uma pequena escola de ensino
+    <aside class="menu">
+        <a class="nav-link my-3 text-white link-menu" href="../index.html"><i class="fa fa-home pr-2"></i> Início</a>
+        <a class="nav-link my-3 text-white link-menu" href="projetos.html"><i class="fa fa-gear pr-2"></i> Projetos</a>
+        <a class="nav-link my-3 text-white link-menu ativo" href="curso_realizados.html"><i class="fa fa-book pr-2"></i> Cursos
+            Realizados</a>
+        <a class="nav-link my-3 text-white link-menu" href="about_me.html"><i class="fa fa-eye pr-2"></i> Sobre Mim </a>
+        <img id="brasao" src="../imgs/EJS.png" alt="logo tipo">
+    </aside>
+    <main class="conteudo d-flex justify-content-center">
+        <div class="home bg-white my-2" style="height: auto;">
+            <div class="border border-success border-2 rounded  m-2 p-2">
+                <h2 style="text-align: center;" class="mb-2 mt-4">Curso Superior</h2>
+                <p class="lead text-center" style="font-family: Arial, Helvetica, sans-serif; font-size: 15px;">
+                    Fiz o curso de Sistemas de Informação na Fundação de Pesquisa e Ensino de Itajubá
+                    (FEPI).
+                </p>
+                <h3 style="text-align: center;" class="mb-2 mt-4">Trabalho de Conclusão de Curso</h3>
+                <p class="lead text-justify" style="font-family: roboto; color:black;">
+                    <strong style="font-size: 18px; font-weight: bold;">Descrição:</strong>
+                    No meu Trabalho de Conclusão de Curso desenvolvi um site para uma pequena escola de
+                    ensino
                     da língua inglesa. A escola necessitava de um sistema para o registro das avaliações dos
-                    alunos. Para ver o texto final do meu TCC <a href="https://drive.google.com/file/d/1S8KBWS2Y3Vap5UFFsT4W8mLEUh8OcLeq/view?usp=sharing" target="_blank">Clique aqui.</a> <br>
+                    alunos. Para ver o texto final do meu TCC <a class="link-text"
+                        href="https://drive.google.com/file/d/1S8KBWS2Y3Vap5UFFsT4W8mLEUh8OcLeq/view?usp=sharing"
+                        target="_blank"><strong>Clique aqui</strong>...</a> <br>
                     Para visualizar o site desenvolvido durante o TCC para a instituição de ensino
-                    <a href="https://beyondiscola.herokuapp.com/" target="_blank">Clique aqui.</a>
+                    <a class="link-text" href="https://beyondiscola.herokuapp.com/" target="_blank">
+                        <strong>Clique aqui</strong>...</a>
                     O site está hospedado no Heroku e é uma plataforma para hospedagem de sites, como estou
                     usando uma conta free, onde tenho limitações de armazenamento de dados, e se a aplicação
                     ficar muito tempo sem receber requisições, a mesma é colocada em hibernação. Sendo assim
-                    ao clicar no link para acessá-la pode demorar uns 30 segundos ou ocorrer um erro por 
+                    ao clicar no link para acessá-la pode demorar uns 30 segundos ou ocorrer um erro por
                     favor clique de novo.
-                    </p>
-                </div>
-                <!-- curso spring boot ionic -->
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-5 border border-white" >
-                    <h3 style="text-align: center;" class="mb-2 mt-4">Curso Spring Boot Ionic</h3>
-                    <h4 style="text-align: center;" class="mb-3" >
-                        <a href="https://www.udemy.com/course/spring-boot-ionic/" target="_blank" data-toggle="tooltip" data-placement="top" title="Link para o curso da Udemy">
-                            Descrição do curso no site Udemy
-                            <i class="fa fa-link" aria-hidden="true"></i>
-                        </a>
-                    </h4>
-                    <p class="lead text-justify" style="font-family: roboto; color: whitesmoke;">
-                        Neste curso foi ensinado como fazer um API para vendas online de produtos. Foi criado
-                        um fluxo com cadastro e login de usuário, um fluxo completo de navegação de carrinhos
-                        de compras, fluxo de fechamento de pedido. Além de uma tela de perfil de usuário com 
-                        envio de foto pela câmera do celular e armazená-la em um bucket na Amazon.
-                        <br><br>
-                        O Backend foi desenvolvido usando Java com Spring Boot e banco de dados Mysql. Foi usada JPA com Hibernate
-                        para mapeamento objeto-relacional, autenticação e autorização com tokens JWT.
-                        <br><br>
-                        O frontend foi desenvolvido em Ionic 3 e Angular 5. Explorou-se a arquitetura MVC, os componentes visuais,
-                        reactive forms, navegação, interceptors, local storage; Processo de build para Android.
-                    </p>
-                    <picture id="cert_curso_spring" hidden=true>
-                        <img src="../Certificados/UC-9ab7985a-bc9b-48cc-885d-fbdc583c4775.jpg" class="img-fluid" alt="Responsive image">
-                    </picture>
-                    <div class="col-lg-12" style="text-align: right;">
-                        <button onclick="mostraCertificado('cert_curso_spring', 'mostrar_Certificado_spring', 'esconder_Certificado_spring')"
-                         id="mostrar_Certificado_spring"
-                         type="button" class="btn btn-primary mb-2 align-content-end" style="text-align: right;">
-                         Ver certificado
-                        </button>
-                        <button onclick="esconderCertificado('cert_curso_spring', 'mostrar_Certificado_spring', 'esconder_Certificado_spring')"
-                         id="esconder_Certificado_spring" hidden=true
-                        type="button" class="btn btn-primary mb-2 mt-3 align-content-end" style="text-align: right;">
+                </p>
+            </div>
+            <div class="border border-success border-2 rounded  m-2 p-2">
+                <h3 style="text-align: center;" class="mb-2 mt-4">Curso Spring Boot Ionic</h3>
+                            <h4 style="text-align: center;" class="mb-3">
+                                <a class="link-text link-menu" href="https://www.udemy.com/course/spring-boot-ionic/" target="_blank"
+                                    data-toggle="tooltip" data-placement="top" title="Link para o curso da Udemy">
+                                    Descrição do curso no site Udemy
+                                    <i class="fa fa-link" aria-hidden="true"></i>
+                                </a>
+                            </h4>
+                            <p class="lead text-justify" style="font-family: roboto; color:black;">
+                                Neste curso foi ensinado como fazer um API para vendas online de produtos. Foi criado
+                                um fluxo com cadastro e login de usuário, um fluxo completo de navegação de carrinhos
+                                de compras, fluxo de fechamento de pedido. Além de uma tela de perfil de usuário com
+                                envio de foto pela câmera do celular e armazená-la em um bucket na Amazon.
+                                <br><br>
+                                O Backend foi desenvolvido usando Java com Spring Boot e banco de dados Mysql. Foi usada
+                                JPA com
+                                Hibernate
+                                para mapeamento objeto-relacional, autenticação e autorização com tokens JWT.
+                                <br><br>
+                                O frontend foi desenvolvido em Ionic 3 e Angular 5. Explorou-se a arquitetura MVC, os
+                                componentes visuais,
+                                reactive forms, navegação, interceptors, local storage; Processo de build para Android.
+                            </p>
+                            <picture id="cert_curso_spring" hidden=true>
+                                <img src="../Certificados/UC-9ab7985a-bc9b-48cc-885d-fbdc583c4775.jpg" class="img-fluid"
+                                    alt="Responsive image">
+                            </picture>
+                            <div class="col-lg-12" style="text-align: right;">
+                                <button
+                                    onclick="mostraCertificado('cert_curso_spring', 'mostrar_Certificado_spring', 'esconder_Certificado_spring')"
+                                    id="mostrar_Certificado_spring" type="button"
+                                    class="btn btn-primary mb-2 align-content-end" style="text-align: right;">
+                                    Ver certificado
+                                </button>
+                                <button
+                                    onclick="esconderCertificado('cert_curso_spring', 'mostrar_Certificado_spring', 'esconder_Certificado_spring')"
+                                    id="esconder_Certificado_spring" hidden=true type="button"
+                                    class="btn btn-primary mb-2 mt-3 align-content-end" style="text-align: right;">
+                                    Esconder certificado
+                                </button>
+                            </div>
+            </div>
+            <div class="border border-success border-2 rounded  m-2 p-2">
+                <h3 style="text-align: center;" class="mb-2 mt-4">Curso Sobre os principais Bandos de Dados
+                </h3>
+                <h4 style="text-align: center;" class="mb-3">
+                    <a class="link-text link-menu" href="https://www.udemy.com/course/curso-completo-de-banco-de-dados-relacionais/"
+                        target="_blank" data-toggle="tooltip" data-placement="top"
+                        title="Link para o curso da Udemy">
+                        Descrição do curso no site Udemy
+                        <i class="fa fa-link" aria-hidden="true"></i>
+                    </a>
+                </h4>
+                <p class="lead text-justify" style="font-family: roboto; color: black;">
+                    Neste curso é composto de mais de 40 horas de videoaulas, em que foram abordados
+                    os bancos de dados Mysql, PostgreSQL, SQL Server. O curso foi totalmente prático.
+                    Foi demonstrado como usar as linguagens SQL (DQL, DML, DDL), PL/SQL e T-SQL.
+                    <br><br>
+                    Sendo mais específico foi abordado a criação de modelagem conceitual, lógica e
+                    física de um banco de dados relacional, como fazer a normalização nas primeira,
+                    segunda e terceira formas normais, criar o dicionário de dados do SGBD. <br> <br>
+                    Instalar os SGBD's: MySQL, PostrgreSQL, SQL Server e Oracle, bem como a utilizar
+                    as respectivas ferramentas de gerenciamento de bancos de dados. <br> <br>
+                    Realizar consultas utilizando os relacionamentos INNER JOIN, LEFT JOIN,
+                    RIGHT JOIN e FULL ALTER JOIN. <br>
+                    Utilizar Triggers, Procedures, Functions e Views.
+                    <br> <br>
+                </p>
+                <picture id="cert_curso_bd" hidden=true>
+                    <img src="../Certificados/certBD.jpg" class="img-fluid" alt="Responsive image">
+                </picture>
+                <div class="col-lg-12" style="text-align: right;">
+                    <button
+                        onclick="mostraCertificado('cert_curso_bd', 'mostrar_certificado_bd', 'esconder_certificado_bd')"
+                        id="mostrar_certificado_bd" type="button"
+                        class="btn btn-primary mb-2 align-content-end" style="text-align: right;">
+                        Ver certificado
+                    </button>
+                    <button
+                        onclick="esconderCertificado('cert_curso_bd', 'mostrar_certificado_bd', 'esconder_certificado_bd')"
+                        id="esconder_certificado_bd" hidden=true type="button"
+                        class="btn btn-primary mb-2 mt-3 align-content-end" style="text-align: right;">
                         Esconder certificado
-                       </button>
+                    </button>
+                </div>
+            </div>
+            <div class="border border-success border-2 rounded  m-2 p-2">
+                <h3 style="text-align: center;" class="mb-2 mt-4">Curso Web Moderno Completo com JavaScript
+                    2021 +
+                    Projetos <br> <strong>(Em andamento)</strong></h3>
+                <h4 style="text-align: center;" class="mb-3">
+                    <a class="link-text link-menu" href="https://www.udemy.com/course/curso-web/" target="_blank" data-toggle="tooltip"
+                        data-placement="top" title="Link para o curso da Udemy">
+                        Descrição do curso no site Udemy
+                        <i class="fa fa-link" aria-hidden="true"></i>
+                    </a>
+                </h4>
+                <p class="lead text-justify" style="font-family: roboto; color: black;">
+                    <br>
+                    O curso é composto de 85 horas de videos aulas. É composto de projetos que utilizam as
+                    tecnologias Angular, React e VUE.
+
+                    <br>
+                    Abaixo a lista das tecnologias a serem aboradados:
+                </p>
+                <div class="row">
+                    <div class="col-6">
+                        <ol>
+                            <li>
+                                JavaScript;
+                            </li>
+                            <li>
+                                Node.js;
+                            </li>
+                            <li>
+                                ESNext;
+                            </li>
+                            <li>
+                                HTML5;
+                            </li>
+                            <li>
+                                CSS3;
+                            </li>
+                            <li>
+                                Integração HTML5, CSS3 e Javascript;
+                            </li>
+                            <li>
+                                Ajax;
+                            </li>
+                            <li>
+                                Gulp;
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-6">
+                        <ol start="9">
+                            <li>
+                                Webpack;
+                            </li>
+                            <li>
+                                jQuery;
+                            </li>
+                            <li>
+                                Bootstrap;
+                            </li>
+                            <li>
+                                React;
+                            </li>
+                            <li>
+                                VueJS;
+                            </li>
+                            <li>
+                                Angular 9;
+                            </li>
+                            <li>
+                                Banco de Dados Relacional;
+                            </li>
+                            <li>
+                                Express;
+                            </li>
+                        </ol>
                     </div>
                 </div>
-                <!-- curso banco de dados -->
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-5 border border-white" >
-                    <h3 style="text-align: center;" class="mb-2 mt-4">Curso Sobre os principais Bandos de Dados</h3>
-                    <h4 style="text-align: center;" class="mb-3" >
-                        <a href="https://www.udemy.com/course/curso-completo-de-banco-de-dados-relacionais/" target="_blank" data-toggle="tooltip" data-placement="top" title="Link para o curso da Udemy">
-                            Descrição do curso no site Udemy
-                            <i class="fa fa-link" aria-hidden="true"></i>
-                        </a>
-                    </h4>
-                    <p class="lead text-justify" style="font-family: roboto; color: whitesmoke;">
-                        Neste curso é composto de mais de 40 horas de videoaulas, em que foram abordados 
-                        os bancos de dados Mysql, PostgreSQL, SQL Server. O curso foi totalmente prático.
-                        Foi demonstrado como usar as linguagens SQL (DQL, DML, DDL), PL/SQL e T-SQL.
-                        <br><br>
-                        Sendo mais específico foi abordado a criação de modelagem conceitual, lógica e
-                        física de um banco de dados relacional, como fazer a normalização nas primeira, 
-                        segunda e terceira formas normais, criar o dicionário de dados do SGBD. <br> <br>
-                        Instalar os SGBD's: MySQL, PostrgreSQL, SQL Server e Oracle, bem como a utilizar 
-                        as respectivas ferramentas de gerenciamento de bancos de dados. <br> <br>
-                        Realizar consultas utilizando os relacionamentos INNER JOIN, LEFT JOIN, 
-                        RIGHT JOIN e FULL ALTER JOIN. <br>
-                        Utilizar Triggers, Procedures, Functions e Views.
-                        <br> <br>
-                    </p>
-                    <picture id="cert_curso_bd" hidden=true>
-                        <img src="../Certificados/certBD.jpg" class="img-fluid" alt="Responsive image">
-                    </picture>
-                    <div class="col-lg-12" style="text-align: right;">
-                        <button onclick="mostraCertificado('cert_curso_bd', 'mostrar_certificado_bd', 'esconder_certificado_bd')"
-                         id="mostrar_certificado_bd"
-                         type="button" class="btn btn-primary mb-2 align-content-end" style="text-align: right;">
-                         Ver certificado
-                        </button>
-                        <button onclick="esconderCertificado('cert_curso_bd', 'mostrar_certificado_bd', 'esconder_certificado_bd')"
-                         id="esconder_certificado_bd" hidden=true
-                        type="button" class="btn btn-primary mb-2 mt-3 align-content-end" style="text-align: right;">
-                        Esconder certificado
-                       </button>
+            </div>
+            <div class="border border-success border-2 rounded  m-2 p-2">
+                <h3 style="text-align: center;" class="mt-4">Curso Especialista Spring Rest 
+                    <strong>(Em andamento)</strong>
+                </h3>
+                <h4 style="text-align: center;" class="mb-3">
+                    <a class="link-text link-menu"  href="https://www.algaworks.com/" target="_blank" data-toggle="tooltip"
+                        data-placement="top" title="Link para o curso da Algaworks">AlgaWorks
+                        <i class="fa fa-link" aria-hidden="true"></i>
+                    </a>
+                </h4>
+                <p class="lead text-justify" style="font-family: roboto; color: black;">
+                    <br>
+                    O curso Spring Boot composto de 25 módulos que desenvolverá uma API denominada
+                    Algafood, esta aplicação será baseada no Ifood, ou seja, uma aplicação de delivery
+                    de comida. Terá uma proposta de intermediar as vendas e entregas entre restaurantes
+                    e clientes.
+                    Abaixo alguns dos tópicos a serem abordados:
+                <div class="row">
+                    <div class="col-6">
+                        <ol>
+                            <li>
+                                Spring e Injeção de Dependências;
+                            </li>
+                            <li>
+                                JPA e Hibernate;
+                            </li>
+                            <li>
+                                Flyway
+                            </li>
+                            <li>
+                                Tratamentos de erros;
+                            </li>
+                            <li>
+                                Bean validation;
+                            </li>
+                            <li>
+                                Teste de integração;
+                            </li>
+                            <li>
+                                Boas práticas e técnicas de APIs;
+                            </li>
+                            <li>
+                                Modelagem avançadas e implementação da API;
+                            </li>
+                            <li>
+                                Modelagem de projeções, pesquisas e relatórios;
+                            </li>
+
+                        </ol>
                     </div>
-                </div>
-                <!-- curso web -->
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-5 border border-white" >
-                    <h3 style="text-align: center;" class="mb-2 mt-4">Curso Web Moderno Completo com JavaScript 2021 + Projetos <strong>(Em andamento)</strong></h3>
-                    <h4 style="text-align: center;" class="mb-3" >
-                        <a href="https://www.udemy.com/course/curso-web/" target="_blank" data-toggle="tooltip" data-placement="top" title="Link para o curso da Udemy">
-                            Descrição do curso no site Udemy
-                            <i class="fa fa-link" aria-hidden="true"></i>
-                        </a>
-                    </h4>
-                    <p class="lead text-justify" style="font-family: roboto; color: whitesmoke;">
-                        <br>
-                        O curso é composto de 85 horas de videos aulas. É composto de projetos que utilizam as
-                        tecnologias Angular, React e VUE.
-                        
-                        <br>
-                        Abaixo a lista das tecnologias a serem aboradados: 
-                    </p>
-                    <div class="row">
-                        <div class="col-6">
-                            <ol>
-                                <li>
-                                    JavaScript;
-                                </li>
-                                <li>
-                                    Node.js;
-                                </li>
-                                <li>
-                                    ESNext;
-                                </li>
-                                <li>
-                                    HTML5;
-                                </li>
-                                <li>
-                                    CSS3;
-                                </li>
-                                <li>
-                                    Integração HTML5, CSS3 e Javascript;
-                                </li>
-                                <li>
-                                    Ajax;
-                                </li>
-                                <li>
-                                    Gulp;
-                                </li>
-                            </ol>
-                        </div>
-                        <div class="col-6">
-                            <ol start="9">
-                                <li>
-                                    Webpack;
-                                </li>
-                                <li>
-                                    jQuery;
-                                </li>
-                                <li>
-                                    Bootstrap;
-                                </li>
-                                <li>
-                                    React;
-                                </li>                            
-                                <li>
-                                    VueJS;
-                                </li>                            
-                                <li>
-                                    Angular 9;
-                                </li>                            
-                                <li>
-                                    Banco de Dados Relacional;
-                                </li>                        
-                                <li>
-                                    Express;
-                                </li>
-                            </ol>
-                        </div>
+                    <div class="col-6">
+                        <ol start="10">
+                            <li>
+                                CORS e consumo de API com JavaScript e Java;
+                            </li>
+                            <li>
+                                Cache HTTP;
+                            </li>
+                            <li>
+                                Documentação da API com OpenAPI, Swagger UI e SpringFox
+                            </li>
+                            <li>
+                                Discoverability e HATEOAS: A Glória de REST;
+                            </li>
+                            <li>
+                                Logging;
+                            </li>
+                            <li>
+                                Segurança com Spring Security e OAuth2;
+                            </li>
+                            <li>
+                                Dockerizando a aplicação;
+                            </li>
+                            <li>
+                                Deploy em containers Docker na Amazon;
+                            </li>
+                        </ol>
                     </div>
                 </div>
                 
-
-                <!-- curso spring algaworks-->
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 my-5 border border-white" >
-                    <h3 style="text-align: center;" class="mb-2 mt-4">Curso Especialista Spring Rest 
-                        <strong>(Em andamento)</strong></h3>
-                    <h4 style="text-align: center;" class="mb-3" >
-                        <a href="https://www.algaworks.com/" target="_blank" data-toggle="tooltip" 
-                        data-placement="top" title="Link para o curso da Algaworks">AlgaWorks
-                            <i class="fa fa-link" aria-hidden="true"></i>
-                        </a>
-                    </h4>
-                    <p class="lead text-justify" style="font-family: roboto; color: whitesmoke;">
-                        <br>
-                        O curso Spring Boot composto de 25 módulos que desenvolverá uma API denominada 
-                        Algafood, esta aplicação será baseada no Ifood, ou seja, uma aplicação de delivery 
-                        de comida. Terá uma proposta de intermediar as vendas e entregas entre restaurantes
-                        e clientes.
-                        Abaixo alguns dos tópicos a serem abordados: 
-                        <div class="row">
-                            <div class="col-6">
-                                <ol>
-                                    <li>
-                                        Spring e Injeção de Dependências;
-                                    </li>
-                                    <li>
-                                        JPA e Hibernate;
-                                    </li>
-                                    <li>
-                                        Flyway
-                                    </li>
-                                    <li>
-                                        Tratamentos de erros;
-                                    </li>
-                                    <li>
-                                        Bean validation;
-                                    </li>
-                                    <li>
-                                        Teste de integração;
-                                    </li>
-                                    <li>
-                                        Boas práticas e técnicas de APIs;
-                                    </li>
-                                    <li>
-                                        Modelagem avançadas e implementação da API;
-                                    </li>
-                                    <li>
-                                        Modelagem de projeções, pesquisas e relatórios;
-                                    </li>
-                                    
-                                </ol>
-                            </div>
-                            <div class="col-6">
-                                <ol start="10">
-                                    <li>
-                                        CORS  e consumo de API com JavaScript e Java;
-                                    </li>                            
-                                    <li>
-                                        Cache HTTP;
-                                    </li>                            
-                                    <li>
-                                        Documentação da API com OpenAPI, Swagger UI e SpringFox
-                                    </li>                            
-                                    <li>
-                                        Discoverability e HATEOAS: A Glória de REST;
-                                    </li>                           
-                                    <li>
-                                        Logging;
-                                    </li>                           
-                                    <li>
-                                        Segurança com Spring Security e OAuth2;
-                                    </li>
-                                    <li>
-                                        Dockerizando a aplicação;
-                                    </li>
-                                    <li>
-                                        Deploy em containers Docker na Amazon;
-                                    </li>
-                                </ol>
-                            </div>
-                        </div>
-                    </p>
-                </div>
+                </p>
             </div>
         </div>
     </main>
-
-    <footer class="footer card-footer text-muted">
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-5 text-center">
-                <h4>Email: nosdejs32@gmail.com </h4>
-            </div>
-            <div class="col-12 col-sm-12 col-md-2 text-center">
+    <footer class="rodape bg-secondary">
+        <div class="mt-2 itens" >
+            <div>
                 <i class="fa fa-birthday-cake" aria-hidden="true"></i>
-                <input disabled style="width: 95px;" type="text" name="ano" id="ano" value="1980 a ">
+                <input class="input-niver" disabled  type="text" name="ano" id="ano" value="1980 a ">
             </div>
-            <div class="col-12 col-sm-12 col-md-5 text-center">
-                <h4>Celular: (35) 9 9869-8374</h4>
-            </div>
+            <span><i class="fa fa-at mr-2"></i> nosdejs32@gmail.com </span>
+            <span > <i class="fa fa-phone mr-1"></i> (35) 9 9869-8374</span>
         </div>
     </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous">
-    </script>
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous">
-    </script>
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+        </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous">
-    </script>
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+        </script>
     <script>
         acoesPagina();
         mostraCertificado()
     </script>
-    
+
 </body>
 
 </html>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt_br">
 
 <head>
     <!-- Required meta tags -->
@@ -9,111 +9,85 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-        <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="js/main.js"></script>
     <title>Olá</title>
 </head>
 
-<body >
-    <header class="card-header cabecalho" >
-        <div class="container-fluid header">
-            <div class="row">
-              <div class="col-12 col-sm-3">
-                <picture id="pic_foto" >
-                    <a href="about_me.html"> <img src="imgs/eu.jpg" class="rounded-circle img-fluid eu" 
-                        alt="logo tipo"></a>
-                </picture>
-              </div>
-              <div class="col-12 col-sm-9 text-center mt-4">
-                <h2 style="font-family: 'Libre Baskerville', serif;" class="" id="ejs" >Edson Jose de Souza</h2>
-                <h4 style="font-family: 'Libre Baskerville', serif;" class="" id="sisInfo" >Bacharel em Sistemas de Informação</h4>
-              </div>
-            </div>
+<body>
+    <div class="logo bg-dark">
+        <div class="container-fluid d-flex justify-content-center">
+            <picture id="pic_foto">
+                <a href="about_me.html"> <img src="imgs/eu.jpg" class="rounded-circle img-fluid" alt="logotipo"></a>
+            </picture>
         </div>
-            <nav class="navbar navbar-expand-sm navbar-light" style="background-color: #e3f2fd;"
-            data-toggle="tooltip" data-placement="top" title="Menu" >
-            <a class="navbar-brand" href="#">
-                <img src="imgs/logoEJS.svg" width="70" height="70" alt="">
-              </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" 
-            data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" 
-            aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse "  id="navbarTogglerDemo02" >
-                <ul class="navbar-nav mt-2" >
-                    <li class="nav-item">
-                        <a class="nav-link ativo" href="index.html">Início </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="view/projetos.html">Projetos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="view/curso_realizados.html">Cursos Realizados</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="view/about_me.html">Sobre Mim</a>
-                    </li>
-                </ul>
-            </div>
-            </nav>
-        </div> 
+    </div>
+    <header class="cabecalho bg-dark">
+        <div class="col-12 col-sm-9 text-center mt-2">
+            <h2 style="font-family: 'Libre Baskerville', serif;" class="" id="ejs">Edson Jose de Souza</h2>
+            <h4 style="font-family: 'Libre Baskerville', serif;" class="" id="sisInfo">
+                Bacharel em Sistemas de Informação
+            </h4>
+        </div>
     </header>
-    <main class="bg-secondary pricipal"  style="min-height: 400px;">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
-                    <article class="text-justify mt-5">
-                        <p class="lead" style="font-family: roboto; color: whitesmoke;">
-                            Estas páginas tem o intuíto de falar um pouco sobre mim e os pequenos sistemas que 
-                            desenvolvi. <br>
-                            Vi nestas páginas uma oportunidade para desenvolver as minhas habilidades no frontend. 
-                            <br> <br>
-                            No momento estou estudando a criação de APIs com Spring Boot e um curso
-                            voltado para as tecnologias web.
-                            <br>
-                            Tenho vontade de desenvolver minhas habilidades tanto no backend como no frontend.
-                            Pois tendo um bom conhecimento em ambas as áreas posso criar aplicações com uma melhor 
-                            experiência do usuário.
-                        </p>
-                    </article>
+    <aside class="menu">
+        <a class="nav-link my-3  ativo text-white link-menu" href="index.html"> <i class="fa fa-home pr-1 "></i>   Início </a>
+        <a class="nav-link my-3 text-white link-menu" href="view/projetos.html"><i class="fa fa-gear pr-1 "></i>   Projetos</a>
+        <a class="nav-link my-3 text-white link-menu" href="view/curso_realizados.html"><i class="fa fa-book pr-1 "></i>   Cursos Realizados</a>
+        <a class="nav-link my-3 text-white link-menu" href="view/about_me.html"> <i class="fa  fa-eye pr-1 "></i>Sobre mim</a>
+        <img id="brasao" src="imgs/EJS.png" alt="logo tipo">
+    </aside>
+    <main class="conteudo d-flex justify-content-center">
+        <div class="home bg-white my-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
+                        <article class="text-justify mt-5">
+                            <p class="lead" style="font-family: roboto; color: black;">
+                                Estas páginas tem o intuíto de falar um pouco sobre mim e os pequenos sistemas que 
+                                desenvolvi. <br>
+                                Vi nestas páginas uma oportunidade para desenvolver as minhas habilidades no frontend. 
+                                <br> <br>
+                                No momento estou estudando a criação de APIs com Spring Boot e um curso
+                                voltado para as tecnologias web.
+                                <br>
+                                Tenho vontade de desenvolver minhas habilidades tanto no backend como no frontend.
+                                Pois tendo um bom conhecimento em ambas as áreas posso criar aplicações com uma melhor 
+                                experiência do usuário.
+                            </p>
+                        </article>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
-
-    <footer class="footer card-footer text-muted">
-        <div class="row">
-            <div class="col-12 col-sm-12 col-md-5 text-center">
-                <h4>Email: nosdejs32@gmail.com </h4>
+    <footer class="rodape bg-secondary">
+        <div class="mt-2 itens" >
+            <div>
+                <i class="fa fa-birthday-cake mr-1" aria-hidden="true"></i>
+                <input class="input-niver" disabled  type="text" name="ano" id="ano" value="1980 a ">
             </div>
-            <div class="col-12 col-sm-12 col-md-2 text-center">
-                <i class="fa fa-birthday-cake" aria-hidden="true"></i>
-                <input disabled style="width: 95px;" type="text" name="ano" id="ano" value="1980 a ">
-            </div>
-            <div class="col-12 col-sm-12 col-md-5 text-center">
-                <h4>Celular: (35) 9 9869-8374</h4>
-            </div>
+                <span><i class="fa fa-at mr-1"></i> nosdejs32@gmail.com</span></a>
+            <span > <i class="fa fa-phone mr-1"></i> (35) 9 9869-8374</span>
         </div>
     </footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous">
-    </script>
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+        </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous">
-    </script>
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+        </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous">
-    </script>
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+        </script>
     <script>
         acoesPagina();
     </script>
@@ -121,7 +95,7 @@
         makeRequisicao('https://curso-spring-ejs.herokuapp.com/');
         makeRequisicao('https://beyondiscola.herokuapp.com/public/index.xhtml/');
     </script>
-    
+
 </body>
 
 </html>
