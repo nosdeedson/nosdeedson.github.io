@@ -111,6 +111,10 @@ body{
     color: white;
 }
 
+#esconder_about_me{
+    box-shadow: var(--shadow);
+}
+
 @media(max-width: 768px) {
     body {
         grid-template-rows:
@@ -137,7 +141,7 @@ body{
     }
 
     .itens{
-        display: flexbox;
+        display: flex;
     }
 
     #brasao{
