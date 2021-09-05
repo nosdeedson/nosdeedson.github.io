@@ -21,14 +21,14 @@
 </head>
 
 <body>
-    <div class="logo bg-dark">
+    <div class="logo fundoCabecalho">
         <div class="container-fluid d-flex justify-content-center">
-            <picture id="pic_foto">
+            <picture id="pic_foto" data-toggle="tooltip" data-placement="top" title="Sobre Mim">
                 <a href="about_me.html"> <img src="../imgs/pp.jpeg" class="rounded-circle img-fluid" alt="logotipo"></a>
             </picture>
         </div>
     </div>
-    <header class="cabecalho bg-dark">
+    <header class="cabecalho fundoCabecalho">
         <div class="col-12 col-sm-9 text-center mt-2">
             <h2 style="font-family: 'Libre Baskerville', serif;" class="" id="ejs">Edson Jose de Souza</h2>
             <h4 style="font-family: 'Libre Baskerville', serif;" class="" id="sisInfo">
@@ -41,7 +41,9 @@
         <a class="nav-link my-3 text-white link-menu" href="projetos.html"><i class="fa fa-gear pr-2"></i> Projetos</a>
         <a class="nav-link my-3 text-white link-menu ativo" href="curso_realizados.html"><i class="fa fa-book pr-2"></i> Cursos
             Realizados</a>
-        <img id="brasao" src="../imgs/EJS.png" alt="logo tipo">
+        <a href="about_me.html" data-toggle="tooltip" data-placement="top" title="Sobre Mim">
+            <img id="brasao" src="../imgs/EJS.png" alt="logo tipo">
+        </a>
     </aside>
     <main class="conteudo d-flex justify-content-center">
         <div class="home bg-white my-2" style="height: auto;">
@@ -342,13 +344,13 @@
             </div>
         </div>
     </main>
-    <footer class="rodape bg-secondary">
+    <footer class="rodape fundoCabecalho">
         <div class="mt-2 itens" >
             <div>
                 <i class="fa fa-birthday-cake" aria-hidden="true"></i>
                 <input class="input-niver" disabled  type="text" name="ano" id="ano" value="1980 a ">
             </div>
-            <span><i class="fa fa-at mr-2"></i> nosdejs32@gmail.com </span>
+            <span><i class="fa fa-envelope mr-1"></i> nosdejs32@gmail.com </span>
             <span > <i class="fa fa-phone mr-1"></i> (35) 9 9869-8374</span>
         </div>
     </footer>
