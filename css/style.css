@@ -67,7 +67,8 @@ body{
 
 .conteudo{
     grid-area: conteudo;
-    background-color: #d1cece;
+    background-color: rgb(241, 236, 236);
+    /* background-color: #d1cece; */
 }
 
 .rodape{
