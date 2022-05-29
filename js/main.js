@@ -1,5 +1,15 @@
 function acoesPagina (){
 
+    eventoKeys();
+
+    slidesActions();
+
+    let cursosRealizados = document.getElementsByClassName("input-cursos");
+
+    for (let i = 0; i < cursosRealizados.length; i++) {
+        document.getElementById("curso-"+(i+1)).value=(i+1)+"/"+cursosRealizados.length
+    }
+
     function typeWriter(textoDoElementoHTML, idDoHtml){
         let vetor = textoDoElementoHTML.split('');
         const elemento = document.querySelector('#'+ idDoHtml)
@@ -252,4 +262,48 @@ function preparaHTML(resposta, tipo){
             break;
     }
 
+}
+
+function eventoKeys(){
+    document.addEventListener('keyup', function(event) {
+        if (event.code == 'ArrowRight' ) {
+          plusSlide(1);
+        }
+        if (event.code == 'ArrowLeft'){
+            plusSlide(-1);
+        }
+      });
+}
+
+let slideIndex = 1;
+
+function plusSlide(n){
+    slideIndex += n;
+    showSlides(slideIndex);
+}
+
+function currentSlide(n){
+    slideIndex = n;
+    showSlides(slideIndex);
+}
+
+function slidesActions(){
+    showSlides(slideIndex);
+}
+
+function showSlides(index){
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot")
+    if(index < 1){
+        slideIndex = slides.length;
+    }
+    if( index > slides.length){
+        slideIndex = 1;
+    }
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block"
+    dots[slideIndex-1].className += " active"
 }
