@@ -74,7 +74,7 @@
                     </div>
                 </div>
                 <div class="col-lg-12" style="text-align: right;">
-                    <button onclick="mostraCertificado('about-me', 'mostrar_about_me', 'esconder_about_me')"
+                    <button onclick="mostrarHtml('about-me', 'mostrar_about_me', 'esconder_about_me')"
                         id="mostrar_about_me" type="button" class="btn btn-primary mb-2 align-content-end sombra_botoes"
                         style="text-align: right;">
                         Sobre Mim
@@ -129,7 +129,7 @@
                             </article>
                         </div>
                         <div class="col-lg-12" style="text-align: right;">
-                            <button onclick="esconderCertificado('about-me', 'mostrar_about_me', 'esconder_about_me')"
+                            <button onclick="esconderHtml('about-me', 'mostrar_about_me', 'esconder_about_me')"
                                 id="esconder_about_me" hidden=true type="button"
                                 class="btn btn-primary mb-2 align-content-end" style="text-align: right;">
                                 Esconder
@@ -142,12 +142,12 @@
 
     </main>
     <footer class="rodape fundoCabecalho">
-        <div class="mt-2 itens">
-            <div>
-                <i class="fa fa-birthday-cake mr-1" aria-hidden="true"></i>
-                <input class="input-niver" disabled type="text" name="ano" id="ano" value="1980 a ">
-            </div>
-            <span><i class="fa fa-envelope mr-1"></i> nosdejs32@gmail.com</span></a>
+        <div class="mt-2 itens" >
+            <a href="https://www.linkedin.com/feed/" target="_blank"
+                data-toggle="tooltip" data-placement="top" title="Visite meu Linkedin">
+                <img style="width: 24px; height: 24px;" src="imgs/linkedin-32.png" alt="linkedin">
+            </a>
+            <span><i class="fa fa-envelope mr-1"></i> nosdejs32@gmail.com </span>
             <span> <i class="fa fa-phone mr-1"></i> (35) 9 9869-8374</span>
         </div>
     </footer>
@@ -155,15 +155,12 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-        </script>
-    <script>
-        acoesPagina();
     </script>
     <script>
         makeRequisicao('https://curso-spring-ejs.herokuapp.com/');
@@ -172,5 +169,8 @@
     </script>
 
 </body>
+<script>
+    acoesPagina();
+</script>
 
 </html>

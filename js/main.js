@@ -1,5 +1,5 @@
 function acoesPagina (){
-
+    console.log('acoespagina')
     eventoKeys();
 
     slidesActions();
@@ -36,10 +36,6 @@ function acoesPagina (){
         }, 1900);
     });
     
-    let hoje = new Date();
-    let ano = hoje.getFullYear();
-    document.getElementById('ano').value += ano;
-
     function addClass( i ){
         document.getElementById(i).className='ativo'
     }
@@ -51,17 +47,13 @@ function acoesPagina (){
     window.onload(requisicoes());
 }
 
-function requisicoes(){
-    alert("tste")
-}
-
-function mostraCertificado(mostraCertificado, escondeBotaoMostra, mostraBotaoEsconde){   
+function mostrarHtml(mostraCertificado, escondeBotaoMostra, mostraBotaoEsconde){   
     document.getElementById(mostraCertificado).hidden = false;
     document.getElementById(escondeBotaoMostra).hidden = true;
     document.getElementById(mostraBotaoEsconde).hidden = false;
 }
 
-function esconderCertificado(esconderCertificado, mostraBotaoMostra, escondeBotaoEsconde){
+function esconderHtml(esconderCertificado, mostraBotaoMostra, escondeBotaoEsconde){
         document.getElementById(esconderCertificado).hidden = true;
         document.getElementById(escondeBotaoEsconde).hidden = true;
         document.getElementById(mostraBotaoMostra).hidden = false;
@@ -97,13 +89,14 @@ const urlCategorias = 'https://curso-spring-ejs.herokuapp.com/categorias/page?si
 const urlEstados = 'https://curso-spring-ejs.herokuapp.com/estados';
 
 // ALGA-FOOD
-const urlCidades = 'https://ejs-algafood.herokuapp.com/cidades';
-const urlCozinhas = 'https://ejs-algafood.herokuapp.com/cozinhas?page=0&size=10';
-const urlFormasPagamento = 'https://ejs-algafood.herokuapp.com/forma-pagamentos';
-const urlRestaurantes = 'https://ejs-algafood.herokuapp.com/restaurantes';
+const urlRoot = 'https://ejs-algafood.herokuapp.com/root';
+// const urlInicio = 'https://ejs-algafood.herokuapp.com';
+//const urlFormasPagamento = 'https://ejs-algafood.herokuapp.com/forma-pagamentos';
+//const urlRestaurantes = 'https://ejs-algafood.herokuapp.com/restaurantes';
 
 function quemChamar(tipo){
     switch (tipo) {
+        /** spring boot ionic */
         case 'produto':
             buscarObjeto(urlProduto, tipo)
             break;
@@ -116,18 +109,19 @@ function quemChamar(tipo){
         case 'estados':
             buscarObjeto(urlEstados, tipo)
             break;
-        case 'cidades':
-            buscarObjeto(urlCidades, tipo)
+            /**alga-food */
+        case 'root':
+            buscarObjeto(urlRoot, tipo)
             break
-        case 'cozinhas':
-            buscarObjeto(urlCozinhas, tipo)
-            break;
-        case 'formas-pagamento':
-            buscarObjeto(urlFormasPagamento, tipo)
-            break;
-        case 'restaurantes':
-            buscarObjeto(urlRestaurantes, tipo)
-            break
+        // case 'inicio':
+        //     buscarObjeto(urlInicio, tipo)
+        //     break;
+        // case 'formas-pagamento':
+        //     buscarObjeto(urlFormasPagamento, tipo)
+        //     break;
+        // case 'restaurantes':
+        //     buscarObjeto(urlRestaurantes, tipo)
+        //     break
         default:
             break;
     }
@@ -146,9 +140,10 @@ function buscarObjeto(url,tipo){
     function alertContents(){
         if ( http.readyState === 4){
             if ( http.status === 200){
-               let retorno = JSON.parse(http.responseText)
+                let retorno = JSON.parse(http.responseText)
                 preparaHTML(retorno, tipo)
             } else{
+                alert('requisição falhou.')
                 retorno = "Falhou";
             }
         }
@@ -157,6 +152,7 @@ function buscarObjeto(url,tipo){
 
 function preparaHTML(resposta, tipo){
     switch (tipo) {
+        /**spring boot ionic */
         case 'produto':
             document.getElementById('api1').innerHTML = "";
             // cria um novo elemento div
@@ -202,62 +198,54 @@ function preparaHTML(resposta, tipo){
             }
             document.getElementById('api1').appendChild(divNova)
             break;
-        case 'cidades':
+            /**alga-food */
+        case 'root':
             document.getElementById('api2').innerHTML = ""
             var divNovaAlga = document.createElement('div');
-            for ( const item of resposta){
-                var conteudoDiv = document.createTextNode('Nome: ' + item.nome + '; ' 
-                + 'Estado: ' + item.estado.nome)
-                divNovaAlga.appendChild(conteudoDiv)
-            }
+            let links = JSON.stringify(resposta)
+            var conteudoDiv = document.createTextNode( links)
+            divNovaAlga.appendChild(conteudoDiv)
             document.getElementById('api2').appendChild(divNovaAlga)
             break;
-        case 'cozinhas':
-            document.getElementById('api2').innerHTML = ""
-            var divNovaAlga = document.createElement('div');
-            contador = 0;
-            for ( const item of resposta.content){
-                var conteudoDiv = document.createTextNode('Nome: ' + item.nome + '; ')
-                divNovaAlga.appendChild(conteudoDiv);
-                contador++
-                if ( (contador % 6) == 0){
-                    var pulaLinha = document.createElement('br');
-                    divNovaAlga.appendChild(pulaLinha)
-                }
-            }
-            document.getElementById('api2').appendChild(divNovaAlga)
-            break;
-        case 'formas-pagamento':
-            document.getElementById('api2').innerHTML = "";
-            var divNovaAlga = document.createElement('div');
-            for ( const item of resposta){
-                var conteudoDiv = document.createTextNode('Descrição: ' + item.descricao + '; ')
-                divNovaAlga.appendChild(conteudoDiv);
-            }
-            document.getElementById('api2').appendChild(divNovaAlga)
-            break;
-            case 'restaurantes':
-            document.getElementById('api2').innerHTML = "";
-            var divNovaAlga = document.createElement('div');
-            var divEndereco = document.createElement('div');
-            for ( const item of resposta){
-                let entregando = 'Não';
-                if ( item.aberto){
-                    entregando = 'Sim'
-                }
-                var conteudoDiv = document.createTextNode('Restaurante: ' + item.nome + '; ' +
-                'Entregando: ' + entregando + '; Taxa de frete: ' + item.taxaFrete + '; ')
-                var endereco = document.createTextNode('Endereço: Logradouro:' + item.endereco.logradouro + ', Bairro: '
-                + item.endereco.bairro + ', Nº ' + item.endereco.numero + ', CEP:' + item.endereco.cep +
-                ', ' + item.endereco.cidade.nome + ', ' + item.endereco.cidade.estado.nome + '.' )
-                divEndereco.appendChild(endereco);
-                divNovaAlga.appendChild(conteudoDiv)
-                divNovaAlga.appendChild(document.createElement('br'));
-                divNovaAlga.appendChild(divEndereco);
-                divNovaAlga.appendChild(document.createElement('br'));
-            }
-            document.getElementById('api2').appendChild(divNovaAlga);
-            break;
+        // case 'inicio':
+        //     document.getElementById('api2').innerHTML = ""
+        //     var divNovaAlga = document.createElement('div');
+        //     let inicio = JSON.stringify(resposta)
+        //     var conteudoDiv = document.createTextNode(inicio)
+        //     divNovaAlga.appendChild(conteudoDiv)
+        //     document.getElementById('api2').appendChild(divNovaAlga)
+        //     break;
+        // case 'formas-pagamento':
+        //     document.getElementById('api2').innerHTML = "";
+        //     var divNovaAlga = document.createElement('div');
+        //     for ( const item of resposta){
+        //         var conteudoDiv = document.createTextNode('Descrição: ' + item.descricao + '; ')
+        //         divNovaAlga.appendChild(conteudoDiv);
+        //     }
+        //     document.getElementById('api2').appendChild(divNovaAlga)
+        //     break;
+        // case 'restaurantes':
+        //     document.getElementById('api2').innerHTML = "";
+        //     var divNovaAlga = document.createElement('div');
+        //     var divEndereco = document.createElement('div');
+        //     for ( const item of resposta){
+        //         let entregando = 'Não';
+        //         if ( item.aberto){
+        //             entregando = 'Sim'
+        //         }
+        //         var conteudoDiv = document.createTextNode('Restaurante: ' + item.nome + '; ' +
+        //         'Entregando: ' + entregando + '; Taxa de frete: ' + item.taxaFrete + '; ')
+        //         var endereco = document.createTextNode('Endereço: Logradouro:' + item.endereco.logradouro + ', Bairro: '
+        //         + item.endereco.bairro + ', Nº ' + item.endereco.numero + ', CEP:' + item.endereco.cep +
+        //         ', ' + item.endereco.cidade.nome + ', ' + item.endereco.cidade.estado.nome + '.' )
+        //         divEndereco.appendChild(endereco);
+        //         divNovaAlga.appendChild(conteudoDiv)
+        //         divNovaAlga.appendChild(document.createElement('br'));
+        //         divNovaAlga.appendChild(divEndereco);
+        //         divNovaAlga.appendChild(document.createElement('br'));
+        //     }
+        //     document.getElementById('api2').appendChild(divNovaAlga);
+        //     break;
         default:
             break;
     }
