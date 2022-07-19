@@ -1,13 +1,7 @@
 function acoesPagina (){
-    console.log('acoespagina')
-    eventoKeys();
-
-    slidesActions();
-
-    let cursosRealizados = document.getElementsByClassName("input-cursos");
-
-    for (let i = 0; i < cursosRealizados.length; i++) {
-        document.getElementById("curso-"+(i+1)).value=(i+1)+"/"+cursosRealizados.length
+   let cursosRealizados = document.querySelectorAll('[ej-label]').length;
+    for (let i = 1; i <= cursosRealizados; i++) {
+        document.getElementById("curso-"+i).textContent=(i)+"/"+cursosRealizados
     }
 
     function typeWriter(textoDoElementoHTML, idDoHtml){
@@ -17,7 +11,7 @@ function acoesPagina (){
         vetor.forEach((letra, i) => {
             setTimeout(() => {
                 elemento.innerHTML += letra;
-            }, 100 * (i + 1));
+            }, 90 * (i + 1));
         }); 
     }
 
@@ -34,17 +28,8 @@ function acoesPagina (){
         setTimeout(() => {
             typeWriter(resultado, 'sisInfo')  
         }, 1900);
-    });
-    
-    function addClass( i ){
-        document.getElementById(i).className='ativo'
-    }
-
-    function itemSelecionado(){
-        window.onload(addClass(0));
-    }
-    itemSelecionado();
-    window.onload(requisicoes());
+    })
+ 
 }
 
 function mostrarHtml(mostraCertificado, escondeBotaoMostra, mostraBotaoEsconde){   
@@ -60,7 +45,6 @@ function esconderHtml(esconderCertificado, mostraBotaoMostra, escondeBotaoEscond
 }
 
 function makeRequisicao(url){
-
     var http = new XMLHttpRequest();
     http.onreadystatechange = alertContents;
     http.open('GET', url);
@@ -90,9 +74,9 @@ const urlEstados = 'https://curso-spring-ejs.herokuapp.com/estados';
 
 // ALGA-FOOD
 const urlRoot = 'https://ejs-algafood.herokuapp.com/root';
-// const urlInicio = 'https://ejs-algafood.herokuapp.com';
-//const urlFormasPagamento = 'https://ejs-algafood.herokuapp.com/forma-pagamentos';
-//const urlRestaurantes = 'https://ejs-algafood.herokuapp.com/restaurantes';
+const urlInicio = 'https://ejs-algafood.herokuapp.com';
+const urlFormasPagamento = 'https://ejs-algafood.herokuapp.com/forma-pagamentos';
+const urlRestaurantes = 'https://ejs-algafood.herokuapp.com/restaurantes';
 
 function quemChamar(tipo){
     switch (tipo) {
@@ -207,91 +191,48 @@ function preparaHTML(resposta, tipo){
             divNovaAlga.appendChild(conteudoDiv)
             document.getElementById('api2').appendChild(divNovaAlga)
             break;
-        // case 'inicio':
-        //     document.getElementById('api2').innerHTML = ""
-        //     var divNovaAlga = document.createElement('div');
-        //     let inicio = JSON.stringify(resposta)
-        //     var conteudoDiv = document.createTextNode(inicio)
-        //     divNovaAlga.appendChild(conteudoDiv)
-        //     document.getElementById('api2').appendChild(divNovaAlga)
-        //     break;
-        // case 'formas-pagamento':
-        //     document.getElementById('api2').innerHTML = "";
-        //     var divNovaAlga = document.createElement('div');
-        //     for ( const item of resposta){
-        //         var conteudoDiv = document.createTextNode('Descrição: ' + item.descricao + '; ')
-        //         divNovaAlga.appendChild(conteudoDiv);
-        //     }
-        //     document.getElementById('api2').appendChild(divNovaAlga)
-        //     break;
-        // case 'restaurantes':
-        //     document.getElementById('api2').innerHTML = "";
-        //     var divNovaAlga = document.createElement('div');
-        //     var divEndereco = document.createElement('div');
-        //     for ( const item of resposta){
-        //         let entregando = 'Não';
-        //         if ( item.aberto){
-        //             entregando = 'Sim'
-        //         }
-        //         var conteudoDiv = document.createTextNode('Restaurante: ' + item.nome + '; ' +
-        //         'Entregando: ' + entregando + '; Taxa de frete: ' + item.taxaFrete + '; ')
-        //         var endereco = document.createTextNode('Endereço: Logradouro:' + item.endereco.logradouro + ', Bairro: '
-        //         + item.endereco.bairro + ', Nº ' + item.endereco.numero + ', CEP:' + item.endereco.cep +
-        //         ', ' + item.endereco.cidade.nome + ', ' + item.endereco.cidade.estado.nome + '.' )
-        //         divEndereco.appendChild(endereco);
-        //         divNovaAlga.appendChild(conteudoDiv)
-        //         divNovaAlga.appendChild(document.createElement('br'));
-        //         divNovaAlga.appendChild(divEndereco);
-        //         divNovaAlga.appendChild(document.createElement('br'));
-        //     }
-        //     document.getElementById('api2').appendChild(divNovaAlga);
-        //     break;
+        case 'inicio':
+            document.getElementById('api2').innerHTML = ""
+            var divNovaAlga = document.createElement('div');
+            let inicio = JSON.stringify(resposta)
+            var conteudoDiv = document.createTextNode(inicio)
+            divNovaAlga.appendChild(conteudoDiv)
+            document.getElementById('api2').appendChild(divNovaAlga)
+            break;
+        case 'formas-pagamento':
+            document.getElementById('api2').innerHTML = "";
+            var divNovaAlga = document.createElement('div');
+            for ( const item of resposta){
+                var conteudoDiv = document.createTextNode('Descrição: ' + item.descricao + '; ')
+                divNovaAlga.appendChild(conteudoDiv);
+            }
+            document.getElementById('api2').appendChild(divNovaAlga)
+            break;
+        case 'restaurantes':
+            document.getElementById('api2').innerHTML = "";
+            var divNovaAlga = document.createElement('div');
+            var divEndereco = document.createElement('div');
+            for ( const item of resposta){
+                let entregando = 'Não';
+                if ( item.aberto){
+                    entregando = 'Sim'
+                }
+                var conteudoDiv = document.createTextNode('Restaurante: ' + item.nome + '; ' +
+                'Entregando: ' + entregando + '; Taxa de frete: ' + item.taxaFrete + '; ')
+                var endereco = document.createTextNode('Endereço: Logradouro:' + item.endereco.logradouro + ', Bairro: '
+                + item.endereco.bairro + ', Nº ' + item.endereco.numero + ', CEP:' + item.endereco.cep +
+                ', ' + item.endereco.cidade.nome + ', ' + item.endereco.cidade.estado.nome + '.' )
+                divEndereco.appendChild(endereco);
+                divNovaAlga.appendChild(conteudoDiv)
+                divNovaAlga.appendChild(document.createElement('br'));
+                divNovaAlga.appendChild(divEndereco);
+                divNovaAlga.appendChild(document.createElement('br'));
+            }
+            document.getElementById('api2').appendChild(divNovaAlga);
+            break;
         default:
             break;
     }
 
 }
 
-function eventoKeys(){
-    document.addEventListener('keyup', function(event) {
-        if (event.code == 'ArrowRight' ) {
-          plusSlide(1);
-        }
-        if (event.code == 'ArrowLeft'){
-            plusSlide(-1);
-        }
-      });
-}
-
-let slideIndex = 1;
-
-function plusSlide(n){
-    slideIndex += n;
-    showSlides(slideIndex);
-}
-
-function currentSlide(n){
-    slideIndex = n;
-    showSlides(slideIndex);
-}
-
-function slidesActions(){
-    showSlides(slideIndex);
-}
-
-function showSlides(index){
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot")
-    if(index < 1){
-        slideIndex = slides.length;
-    }
-    if( index > slides.length){
-        slideIndex = 1;
-    }
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none"
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block"
-    dots[slideIndex-1].className += " active"
-}

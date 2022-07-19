@@ -1,0 +1,15 @@
+.labelText {
+    color: #131212;
+    font-size: 14px;
+    padding: 5px;
+    position: relative;
+    float: right;
+    width: 35px;
+    background-color: #d8cfcf;
+}
+
+.button-navegar-slides{
+    height: 50px;
+    width: 50px;
+    top: 50%;
+}

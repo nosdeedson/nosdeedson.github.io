@@ -1,176 +1,83 @@
-<!doctype html>
-<html lang="pt_br">
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
-    <link rel="shortcut icon" type="image/x-icon" href="imgs/favicon.png">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@0;1&family=Roboto:wght@300;400&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js"></script>
-    <title>Olá</title>
-</head>
-
-<body>
-    <div class="logo fundoCabecalho">
-        <div class="container-fluid d-flex justify-content-center">
-            <picture id="pic_foto" >
-                <a href="view/about_me.html"> <img src="imgs/pp.jpeg" class="rounded-circle img-fluid"
-                        alt="logotipo" data-toggle="tooltip" data-placement="top" title="Sobre Mim"></a>
-            </picture>
-        </div>
-    </div>
-    <header class="cabecalho fundoCabecalho">
-        <div class="col-12 col-sm-9 text-center mt-2">
-            <h2 style="font-family: 'Libre Baskerville', serif;" class="" id="ejs">Edson Jose de Souza</h2>
-            <h4 style="font-family: 'Libre Baskerville', serif;" class="" id="sisInfo">
-                Bacharel em Sistemas de Informação
-            </h4>
-        </div>
-    </header>
-    <aside class="menu">
-        <a class="nav-link my-3  ativo text-white link-menu" href="index.html"> <i class="fa fa-home pr-1 "></i> Início
-        </a>
-        <a class="nav-link my-3 text-white link-menu" href="view/projetos.html"><i class="fa fa-gear pr-1 "></i>
-            Projetos</a>
-        <a class="nav-link my-3 text-white link-menu" href="view/curso_realizados.html"><i class="fa fa-book pr-1 "></i>
-            Cursos Realizados</a>
-        <a href="view/about_me.html">
-            <img id="brasao" src="imgs/EJS.png" alt="logo tipo" data-toggle="tooltip" data-placement="top" title="Sobre Mim">
-        </a>
-    </aside>
-    <main class="conteudo d-flex justify-content-center">
-        <div class="home bg-white my-2" style="height: auto;">
-            <div class="border border-success border-2 rounded  m-2 p-2">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
-                            <article class="text-justify mt-1">
-                                <p class="lead" style="font-family: roboto; color: black;">
-                                    Estas páginas tem o intuíto de falar um pouco sobre mim e os pequenos sistemas que
-                                    desenvolvi. <br>
-                                    Vi nestas páginas uma oportunidade para desenvolver as minhas habilidades no
-                                    frontend.
-                                    <br> <br>
-                                    No momento estou estudando a criação de APIs com Spring Boot e um curso
-                                    voltado para as tecnologias web.
-                                    <br>
-                                    Tenho vontade de desenvolver minhas habilidades tanto no backend como no frontend.
-                                    Pois tendo um bom conhecimento em ambas as áreas posso criar aplicações com uma
-                                    melhor
-                                    experiência do usuário.
-                                </p>
-                            </article>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12" style="text-align: right;">
-                    <button onclick="mostrarHtml('about-me', 'mostrar_about_me', 'esconder_about_me')"
-                        id="mostrar_about_me" type="button" class="btn btn-primary mb-2 align-content-end sombra_botoes"
-                        style="text-align: right;">
-                        Sobre Mim
-                    </button>
-                </div>
-            </div>
-
-            <div id="about-me" class="border border-success border-2 rounded  m-2 p-2 " hidden>
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="text-center my-2">
-                            <h3 class="h3">Sobre Mim</h3>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mt-1">
-                            <article class="">
-                                <p class="lead" style="font-family: roboto; color: black;">
-                                    Nasci em uma família de 6 filhos, tendo sido o
-                                    quarto. Minha cidade natal é Delfim Moreira, mais precisamente o bairro rural
-                                    São Bernardo. <br><br>
-                                    Comecei a ajudar meu pai a cultivar batatas aos doze anos de idade, e aos dezessete
-                                    comecei a trabalhar por conta própria na mesma atividade. Trabalhei como lavrador
-                                    até 2012, mas a decisão de mudar de carreira foi tomada no início de 2009,
-                                    portanto voltei a estudar, pois não tinha finalizado nem o ensino fundamental;
-                                    ingressei no EJA - Estudo para Jovens e Adultos - equivalente ao supletivo.
-                                    <br><br>
-                                    Em 2013 comecei um curso técnico de mecatrônica, e a trabalhar na Prefeitura de
-                                    Delfim
-                                    Moreira como contratado. <br> <br>
-                                    Em Fevereiro de 2014 pedi demissão da Prefeitura para fazer o estágio obrigatório do
-                                    curso
-                                    técnico.
-                                    <br> <br>
-                                    Em 2015, comecei procurar por oportunidades de trabalho, realizei algumas
-                                    entrevistas em empresas de
-                                    Itajubá Minas Gerais, como não consegui trabalho, decidi estudar para concursos
-                                    públicos.
-                                    <br><br>
-                                    O objetivo era obter uma renda para poder fazer um curso superior, já que com minha
-                                    nota do ENEM
-                                    não foi possível ingressar em uma universidade pública. <br> <br>
-                                    Em Setembro de 2016 comecei a trabalhar na Prefeitura de Maria da Fé, após ter
-                                    passado no concurso em
-                                    primeiro lugar. <br>
-                                    Como estudei um pouco de programação no curso técnico, e me interessei pela área,
-                                    decidi fazer
-                                    um curso superior nesta área, iniciei o curso de <strong style="color: black;">
-                                        Sistemas de Informação na Fundação de
-                                        Ensino e Pesquisa de Itajubá (FEPI).</strong> <br> <br>
-                                    Desde então tenho estudado linguagens de programação.
-                                </p>
-                                <br>
-                            </article>
-                        </div>
-                        <div class="col-lg-12" style="text-align: right;">
-                            <button onclick="esconderHtml('about-me', 'mostrar_about_me', 'esconder_about_me')"
-                                id="esconder_about_me" hidden=true type="button"
-                                class="btn btn-primary mb-2 align-content-end" style="text-align: right;">
-                                Esconder
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </main>
-    <footer class="rodape fundoCabecalho">
-        <div class="mt-2 itens" >
-            <a href="https://www.linkedin.com/feed/" target="_blank"
-                data-toggle="tooltip" data-placement="top" title="Visite meu Linkedin">
-                <img style="width: 24px; height: 24px;" src="imgs/linkedin-32.png" alt="linkedin">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Edson José Souza</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="js/main.js"></script>
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="index.html">
+                <span class="d-block d-lg-none">Edson Jose de Souza</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpeg" alt="..." /></span>
             </a>
-            <span><i class="fa fa-envelope mr-1"></i> nosdejs32@gmail.com </span>
-            <span> <i class="fa fa-phone mr-1"></i> (35) 9 9869-8374</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="view/about_me.html">Sobre Mim</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="view/projects.html">Projetos</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="view/experience.html">Experiência</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="view/app_heroku.html">Apps Heroku</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="view/courses_taken.html">Cursos Realizados</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- home-->
+            <section class="resume-section" id="home">
+                <div class="resume-section-content">
+                    <h1 class="mb-0" id="ejs">
+                        Edson José de Souza
+                    </h1>
+                    <br>
+                    <h2 id="sisInfo" class="mb-0 text-secondary">
+                        Bacharel em Sistemas de Informação
+                    </h2>
+                    <br>
+                    <div class="subheading mb-5">
+                        Rua Zequinha Luiz, 108 Itajubá Minas Gerais, CEP: 37501-074· (35) 9 98698374·
+                        <a href="mailto:nosdejs32@gmail.com">nosdejs32@gmail.com</a>
+                    </div>
+                    <p class="lead mb-5">
+                        Estas páginas tem o intuíto de falar um pouco sobre mim e os pequenos sistemas que
+                        desenvolvi. <br>
+                        Vi nestas páginas uma oportunidade para desenvolver as minhas habilidades no
+                        frontend.
+                        <br> <br>
+                        Busco desenvolver minhas habilidades tanto no backend como no frontend.
+                        Visando sempre implantar técnicas de usabilidade.
+                    </p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="https://www.linkedin.com/feed/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="https://github.com/nosdeedson?tab=repositories"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </section>
         </div>
-    </footer>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        
+    </body>
     <script>
-        makeRequisicao('https://curso-spring-ejs.herokuapp.com/');
-        makeRequisicao('https://beyondiscola.herokuapp.com/public/index.xhtml/');
+        acoesPagina();
+        makeRequisicao('https://beyondiscola.herokuapp.com/');
         makeRequisicao('https://ejs-algafood.herokuapp.com/');
+        makeRequisicao('https://curso-spring-ejs.herokuapp.com/');
     </script>
-
-</body>
-<script>
-    acoesPagina();
-</script>
-
 </html>
