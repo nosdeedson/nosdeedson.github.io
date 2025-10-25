@@ -459,6 +459,11 @@ h6 {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
+
+  img #resume-image {
+    display: none; /* This makes the image disappear and removes its space */
+    visibility: hidden;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1290,6 +1295,11 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
+
+@media screen and (max-width: 1196px) {
+  #resume-image {
+    display: none; /* This makes the image disappear and removes its space */
+    visibility: hidden;
+  }
 }
+
